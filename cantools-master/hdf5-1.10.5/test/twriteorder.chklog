@@ -1,0 +1,16 @@
+============================
+ twriteorder  Test Log
+============================
+blocksize = 1024
+part_size = 2048
+nlinkedblock = 512
+launch = 0
+Creating skeleton data file for test...
+File created.
+110310: launch reader process
+All passed
+0.01user 0.00system 0:00.01elapsed 135%CPU (0avgtext+0avgdata 3612maxresident)k
+0inputs+2048outputs (0major+1899minor)pagefaults 0swaps
+
+Finished testing twriteorder 
+============================

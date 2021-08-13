@@ -1,0 +1,8 @@
+============================
+ h5clear_gentest  Test Log
+============================
+0.02user 0.00system 0:00.02elapsed 110%CPU (0avgtext+0avgdata 10920maxresident)k
+0inputs+160outputs (0major+3360minor)pagefaults 0swaps
+
+Finished testing h5clear_gentest 
+============================

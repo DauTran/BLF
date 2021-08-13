@@ -1,0 +1,5831 @@
+============================
+testswmr.sh  Test Log
+============================
+cp: -r not specified; omitting directory 'swmr_test'
+cp: -r not specified; omitting directory 'swmr_test'
+
+*******************************************************************************
+** Loop testing parameters: -i ea 
+*******************************************************************************
+
+
+###############################################################################
+## Generator test
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = -1
+	index type = ea
+Using generator random seed (used in sparse test only): 78640
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_generator with SWMR_WRITE
+Parameters:
+	swmr writes on
+	compression level = -1
+	index type = ea
+Using generator random seed (used in sparse test only): 231748
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+
+###############################################################################
+## Use H5Fstart_swmr_write() to enable SWMR writing mode
+###############################################################################
+launch the swmr_start_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 396024
+Using reader random seed: 742263
+Using reader random seed: 753604
+Using reader random seed: 763703
+Using reader random seed: 763474
+Using reader random seed: 769835
+
+###############################################################################
+## Writer test - test expanding the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes on
+	compression level = -1
+	index type = ea
+Using generator random seed (used in sparse test only): 798504
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 960635
+Using reader random seed: 116005
+Using reader random seed: 118074
+Using reader random seed: 121145
+Using reader random seed: 126922
+Using reader random seed: 125321
+
+###############################################################################
+## Remove test - test shrinking the dataset
+###############################################################################
+launch the swmr_remove_writer
+Parameters:
+	# of shrinks between flushes = 1000
+	# of shrinks = 40000
+Using writer random seed: 157684
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 296717
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0094'
+Common symbol #1 = '0-0055'
+Common symbol #2 = '0-0041'
+Common symbol #3 = '0-0052'
+Common symbol #4 = '0-0022'
+Random symbol #0 = '1-0103'
+Random symbol #1 = '2-0053'
+Random symbol #2 = '1-0067'
+Random symbol #3 = '4-0793'
+RaParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 299777
+Generating symbol names
+ndom syChoosing datasets
+Common symbol #0 = '0-0085'
+Common symbol #1 = '0-0035'
+Common symbol #2 = '0-0009'
+Common symbol #3 = '0-0000'
+Common symbmbol #4 = '3-0301'
+Random symbol #5 = '0-0040'
+Random symbol #6 = '3-0048'
+Random symbol #7 = '0-0016'
+Random symbol #8 = '4-0215'
+Random symbol #9 = '0-0023'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0094', # of records = 901
+Symbol = '0-0055', # of records = 931
+Symbol = '0-0041', # of records = 889
+Symbol = '0-0052', # of records = 915
+Symbol = '0-0022', # of records = 909
+Checking random symbols
+Symbol = '1-0103', # of records = 235
+Symbol = '2-0053', # of records = 44
+Symbol = '1-0067', # of records = 255
+Symbol = '4-0793', # of records = 12
+Symbol = '3-0301', # of records = 30
+Symbol = '0-0040', # of records = 914
+Symbol = '3-0048', # of records = 35
+Symbol = '0-0016', # of records = 855
+Symbol = '4-0215', # of records = 15
+Symbol = '0-0023', # of records = 853
+Closing file
+ol #4 = '0-0066'
+Random symbol #0 = '3-0117'
+Random symbol Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 305381
+Generating symbol names
+Choosin#1 = '2-0280'
+Random symbol #2 = '0-0006'
+Random symbol #3 = '0-0052'
+Random symbol #4 = '1-0056'
+Random symbol #5 = '1-0190'
+Random symbol #6 = '3-0410'
+Random symbol #7 = '0-0001'
+Random symbol #8 = '2-0203'
+Random symbol #9 = '1-0180'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 806
+Symbol = '0-0035', # of records = 901
+Symbol = '0-0009', # of records = 904
+g dataSsyemtbso
+lC o=m m'on0-0000 's,y m#b oolf  #r0e c=o r'ds0-0028 '=
+ C908o
+mmon symSboylm b#ol1  ==  ''0-00660-0053'',
+ C#om moofn  rseycmobrodls  #=2  880=
+ '0-0094'C
+hCeocmkmionng  sryamnbdoolm  #s3y m=b o'l0-0091s'
+
+CommoSny msbyomlb o=l  '#3-01174' ,=  #' 0-0002o'f
+ Rraencdoormd ss y=m bo22l
+ #0 = '2-0021'
+SRyamnbdoolm  =s y'mb2-0280o'l,  ##1  o=f  'r0-0038e'c
+oRradndom symbol #2 = '3-0657'
+Rsa n=d o46m
+ symbol #3 S=y m'b4-1355o'l
+ R=a n'd0-0006o'm,  s#y mobfo lr e#c4o r=d s' 4-0021=' 
+R843a
+ndom symSbyomlb o#l5  ==  ''0-00521-0110'',
+ R#a nodfo mr escyomrbdosl  =# 6899 
+= Symbol = '1-0056', # of records = 218
+'0-0091'
+Random symbol #7 = '0-0088'
+Random symbol #8 = '1-0069'
+Random symbol #9 = '1-0006'
+Reading records
+Opening file: swmr_data.h5
+Symbol = '1-0190', C#h eocfk irnegc ocrodmsm o=n  227s
+ymbols
+Symbol = '3-0410', # of Sryemcboorld s=  =' 280-0028
+', # of recSoyrmdbso l=  = 824'
+0-0001', # of records S=y mb855o
+l = '0-0053', # Soyfm broelc o=r d's2-0203 '=,  837#
+ of records S=y m52b
+ol = '0-0094',S y#m boofl  r=e c'o1-0180r'd,s  #=  o887f
+ records =S y217m
+bol =C l'os0-0091i'n,g  #f iolfe 
+records = 833
+Symbol = '0-0002', # of records = 856
+Checking random symbols
+Symbol = '2-0021', # of records = 55
+Symbol = '0-0038', # of records = 873
+Symbol = '3-0657', # of records = 36
+Symbol = '4-1355', # of records = 9
+Symbol = '4-0021', # of records = 20
+Symbol = '1-0110', # of records = 207
+Symbol = '0-0091', # of records = 833
+Symbol = '0-0088', # of records = 886
+Symbol = '1-0069', # of records = 204
+Symbol = '1-0006', # of records = 210
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 318338
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0072'
+Common symbol #1 = '0-0029'
+Common symbol #2 = '0-0090'
+Common symbol #3 = '0-0045'
+Common symbol #4 = '0-0041'
+Random symbol #0 = '0-0051'
+Random symbol #1 = '2-0011'
+Random symbol #2 = '0-0009'
+Random symbol #3 = '4-0711'
+Random symbol #4 = '4-0254'
+Random symbol #5 = '1-0125'
+Random symbol #6 = '2-0296'
+Random symbol #7 = '0-0048'
+Random symbol #8 = '0-0013'
+Random symbol #9 = '3-0723'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0072', # of records = 930
+Symbol = '0-0029', # of records = 911
+Symbol = '0-0090', # of records = 909
+Symbol = '0-0045', # of records = 851
+Symbol = '0-0041', # of records = 848
+Checking random symbols
+Symbol = '0-0051', # of records = 898
+Symbol = '2-0011', # of records = 60
+Symbol = '0-0009', # of records = 904
+Symbol = '4-0711', # of records = 11
+Symbol = '4-0254', # of records = 9
+Symbol = '1-0125', # of records = 220
+Symbol = '2-0296', # of records = 45
+Symbol = '0-0048', # of records = 779
+Symbol = '0-0013', # of records = 873
+Symbol = '3-0723', # of records = 21
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 321757
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0084'
+Common symbol #1 = '0-0052'
+Common symbol #2 = '0-0057'
+Common symbol #3 = '0-0009'
+Common symbol #4 = '0-0043'
+Random symbol #0 = '1-0065'
+Random symbol #1 = '3-0709'
+Random symbol #2 = '3-0556'
+Random symbol #3 = '4-0547'
+Random symbol #4 = '0-0044'
+Random symbol #5 = '0-0084'
+Random symbol #6 = '1-0126'
+Random symbol #7 = '0-0030'
+Random symbol #8 = '0-0034'
+Random symbol #9 = '2-0076'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0084', # of records = 823
+Symbol = '0-0052', # of records = 899
+Symbol = '0-0057', # of records = 905
+Symbol = '0-0009', # of records = 904
+Symbol = '0-0043', # of records = 818
+Checking random symbols
+Symbol = '1-0065', # of records = 204
+Symbol = '3-0709', # of records = 21
+Symbol = '3-0556', # of records = 31
+Symbol = '4-0547', # of records = 15
+Symbol = '0-0044', # of records = 840
+Symbol = '0-0084', # of records = 823
+Symbol = '1-0126', # of records = 226
+Symbol = '0-0030', # of records = 953
+Symbol = '0-0034', # of records = 848
+Symbol = '2-0076', # of records = 46
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0094', # of records = 8
+Symbol = '0-0055', # of records = 54
+Symbol = '0-0041', # of records = 0
+Symbol = '0-0052', # of records = 0
+Symbol = '0-0022', # of records = 0
+Checking random symbols
+Symbol = '1-0103', # of records = 0
+Symbol = '2-0053', # of records = 0
+Symbol = '1-0067', # of records = 0
+Symbol = '4-0793', # of records = 0
+Symbol = '3-0301', # of records = 0
+Symbol = '0-0040', # of records = 0
+Symbol = '3-0048', # of records = 22
+Symbol = '0-0016', # of records = 0
+Symbol = '4-0215', # of records = 15
+Symbol = '0-0023', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 0
+Symbol = '0-0035', # of records = 28
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0066', # of records = 0
+Checking random symbols
+Symbol = '3-0117', # of records = 0
+Symbol = '2-0280', # of records = 0
+Symbol = '0-0006', # of records = 0
+Symbol = '0-0052', # of records = 0
+Symbol = '1-0056', # of records = 0
+Symbol = '1-0190', # of records = 0
+Symbol = '3-0410', # of records = 11
+Symbol = '0-0001', # of records = 0
+Symbol = '2-0203', # of records = 22
+Symbol = '1-0180', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0028', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0094', # of records = 8
+Symbol = '0-0091', # of records = 0
+Symbol = '0-0002', # of records = 0
+Checking random symbols
+Symbol = '2-0021', # of records = 16
+Symbol = '0-0038', # of records = 0
+Symbol = '3-0657', # of records = 13
+Symbol = '4-1355', # of records = 0
+Symbol = '4-0021', # of records = 16
+Symbol = '1-0110', # of records = 0
+Symbol = '0-0091', # of records = 0
+Symbol = '0-0088', # of records = 0
+Symbol = '1-0069', # of records = 0
+Symbol = '1-0006', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0072', # of records = 0
+Symbol = '0-0029', # of records = 70
+Symbol = '0-0090', # of records = 4
+Symbol = '0-0045', # of records = 0
+Symbol = '0-0041', # of records = 0
+Checking random symbols
+Symbol = '0-0051', # of records = 48
+Symbol = '2-0011', # of records = 0
+Symbol = '0-0009', # of records = 0
+Symbol = '4-0711', # of records = 0
+Symbol = '4-0254', # of records = 0
+Symbol = '1-0125', # of records = 0
+Symbol = '2-0296', # of records = 0
+Symbol = '0-0048', # of records = 0
+Symbol = '0-0013', # of records = 0
+Symbol = '3-0723', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0084', # of records = 0
+Symbol = '0-0052', # of records = 0
+Symbol = '0-0057', # of records = 0
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0043', # of records = 0
+Checking random symbols
+Symbol = '1-0065', # of records = 0
+Symbol = '3-0709', # of records = 0
+Symbol = '3-0556', # of records = 0
+Symbol = '4-0547', # of records = 6
+Symbol = '0-0044', # of records = 0
+Symbol = '0-0084', # of records = 0
+Symbol = '1-0126', # of records = 0
+Symbol = '0-0030', # of records = 0
+Symbol = '0-0034', # of records = 0
+Symbol = '2-0076', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0094', # of records = 8
+Symbol = '0-0055', # of records = 54
+Symbol = '0-0041', # of records = 0
+Symbol = '0-0052', # of records = 0
+Symbol = '0-0022', # of records = 0
+Checking random symbols
+Symbol = '1-0103', # of records = 0
+Symbol = '2-0053', # of records = 0
+Symbol = '1-0067', # of records = 0
+Symbol = '4-0793', # of records = 0
+Symbol = '3-0301', # of records = 0
+Symbol = '0-0040', # of records = 0
+Symbol = '3-0048', # of records = 22
+Symbol = '0-0016', # of records = 0
+Symbol = '4-0215', # of records = 15
+Symbol = '0-0023', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 0
+Symbol = '0-0035', # of records = 28
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0066', # of records = 0
+Checking random symbols
+Symbol = '3-0117', # of records = 0
+Symbol = '2-0280', # of records = 0
+Symbol = '0-0006', # of records = 0
+Symbol = '0-0052', # of records = 0
+Symbol = '1-0056', # of records = 0
+Symbol = '1-0190', # of records = 0
+Symbol = '3-0410', # of records = 11
+Symbol = '0-0001', # of records = 0
+Symbol = '2-0203', # of records = 22
+Symbol = '1-0180', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0028', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0094', # of records = 8
+Symbol = '0-0091', # of records = 0
+Symbol = '0-0002', # of records = 0
+Checking random symbols
+Symbol = '2-0021', # of records = 16
+Symbol = '0-0038', # of records = 0
+Symbol = '3-0657', # of records = 13
+Symbol = '4-1355', # of records = 0
+Symbol = '4-0021', # of records = 16
+Symbol = '1-0110', # of records = 0
+Symbol = '0-0091', # of records = 0
+Symbol = '0-0088', # of records = 0
+Symbol = '1-0069', # of records = 0
+Symbol = '1-0006', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0072', # of records = 0
+Symbol = '0-0029', # of records = 70
+Symbol = '0-0090', # of records = 4
+Symbol = '0-0045', # of records = 0
+Symbol = '0-0041', # of records = 0
+Checking random symbols
+Symbol = '0-0051', # of records = 48
+Symbol = '2-0011', # of records = 0
+Symbol = '0-0009', # of records = 0
+Symbol = '4-0711', # of records = 0
+Symbol = '4-0254', # of records = 0
+Symbol = '1-0125', # of records = 0
+Symbol = '2-0296', # of records = 0
+Symbol = '0-0048', # of records = 0
+Symbol = '0-0013', # of recordsOpen = 0
+ing file: swmr_data.h5
+Symbol = '3-0723', # of records = 0
+Closing file
+Checking common symbols
+Symbol = '0-0084', # of records = 0
+Symbol = '0-0052', # of records = 0
+Symbol = '0-0057', # of records = 0
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0043', # of records = 0
+Checking random symbols
+Symbol = '1-0065', # of records = 0
+Symbol = '3-0709', # of records = 0
+Symbol = '3-0556', # of records = 0
+Symbol = '4-0547', # of records = 6
+Symbol = '0-0044', # of records = 0
+Symbol = '0-0084', # of records = 0
+Symbol = '1-0126', # of records = 0
+Symbol = '0-0030', # of records = 0
+Symbol = '0-0034', # of records = 0
+Symbol = '2-0076', # of records = 0
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Add/remove test - randomly grow or shrink the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = -1
+	index type = ea
+Using generator random seed (used in sparse test only): 352289
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+Using writer random seed: 500960
+launch the swmr_addrem_writer
+Parameters:
+	# of operations between flushes = 1000
+	# of operations = 200000
+Using writer random seed: 688392
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding and removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 833236
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0037'
+Common symbol #1 = '0-0030'
+Common symbol #2 = '0-0042'
+Common symbol #3 = '0-0051'
+Common symbol #4 = '0-0084'
+Random symbol #0 = '0-0058'
+Random symbol #1 = '0-0005'
+Random symbol #2 = '3-0146'
+Random symbol #3 = '0-0064'
+Random symbol #4 = '0-0065'
+Random symbol #5 = '1-0133'
+Random symbol #6 = '0-0044'
+Random symbol #7 = '2-0382'
+Random symbol #8 = '0-0084'
+Random symbol #9 = '1-0070'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 909
+Symbol = '0-0030', # of records = 911
+Symbol = '0-0042', # of records = 899
+Symbol = '0-0051', # of records = 948
+Symbol = '0-0084', # of records = 857
+Checking random symbols
+Symbol = '0-0058', # of records = 987
+Symbol = '0-0005', # of records = 933
+Symbol = '3-0146', # of records = 28
+Symbol = '0-0064', # of records = 865
+Symbol = '0-0065', # of records = 854
+Symbol = '1-0133', # of records = 207
+Symbol = '0-0044', # of records = 866
+Symbol = '2-0382', # of records = 53
+Symbol = '0-0084', # of records = 857
+Symbol = '1-0070', # of records = 228
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 843479
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0066'
+Common symbol #1 = '0-0082'
+Common symbol #2 = '0-0062'
+Common symbol #3 = '0-0092'
+Common symbol #4 = '0-0076'
+Random symbol #0 = '3-0772'
+Random symbol #1 = '0-0041'
+Random symbol #2 = '1-0043'
+Random symbol #3 = '0-0004'
+Random symbol #4 = '1-0135'
+Random symbol #5 = '2-0067'
+Random symbol #6 = '0-0070'
+Random symbol #7 = '0-0052'
+Random symbol #8 = '2-0128'
+Random symbol #9 = '3-0125'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 892
+Symbol = '0-0082', # of records = 898
+Symbol = '0-0062', # of records = 890
+Symbol = '0-0092', # of records = 937
+Symbol = '0-0076', # of records = 926
+Checking random symbols
+Symbol = '3-0772', # of records = 39
+Symbol = '0-0041', # of records = 926
+Symbol = '1-0043', # of records = 227
+Symbol = '0-0004', # of records = 893
+Symbol = '1-0135', # of records = 226
+Symbol = '2-0067', # of records = 52
+Symbol = '0-0070', # of records = 858
+Symbol = '0-0052', # of records = 888
+Symbol = '2-0128', # of records = 74
+Symbol = '3-0125', # of records = 24
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 848660
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0098'
+Common symbol #1 = '0-0031'
+Common symbol #2 = '0-0029'
+Common symbol #3 = '0-0059'
+Common symbol #4 = '0-0006'
+Random symbol #0 = '3-0740'
+Random symbol #1 = '1-0003'
+Random symbol #2 = '0-0067'
+Random symbol #3 = '2-0365'
+Random symbol #4 = '0-0088'
+Random symbol #5 = '0-0017'
+Random symbol #6 = '3-0402'
+Random symbol #7 = '0-0095'
+Random symbol #8 = '1-0125'
+Random symbol #9 = '1-0044'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 882
+Symbol = '0-0031', # of records = 877
+Symbol = '0-0029', # of records = 892
+Symbol = '0-0059', # of records = 928
+Symbol = '0-0006', # of records = 872
+Checking random symbols
+Symbol = '3-0740', # of records = 22
+Symbol = '1-0003', # of records = 235
+Symbol = '0-0067', # of records = 891
+Symbol = '2-0365', # of records = 48
+Symbol = '0-0088', # of records = 946
+Symbol = '0-0017', # of records = 888
+Symbol = '3-0402', # of records = 28
+Symbol = '0-0095', # of records = 832
+Symbol = '1-0125', # of records = 224
+Symbol = '1-0044', # of records = 232
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 853816
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0023'
+Common symbol #1 = '0-0079'
+Common symbol #2 = '0-0012'
+Common symbol #3 = '0-0057'
+Common symbol #4 = '0-0005'
+Random symbol #0 = '2-0197'
+Random symbol #1 = '0-0070'
+Random symbol #2 = '0-0035'
+Random symbol #3 = '0-0012'
+Random symbol #4 = '0-0093'
+Random symbol #5 = '1-0149'
+Random symbol #6 = '0-0051'
+Random symbol #7 = '0-0028'
+Random symbol #8 = '2-0081'
+Random symbol #9 = '4-0606'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 897
+Symbol = '0-0079', # of records = 884
+Symbol = '0-0012', # of records = 907
+Symbol = '0-0057', # of records = 876
+Symbol = '0-0005', # of records = 930
+Checking random symbols
+Symbol = '2-0197', # of records = 70
+Symbol = '0-0070', # of records = 849
+Symbol = '0-0035', # of records = 853
+Symbol = '0-0012', # of records = 907
+Symbol = '0-0093', # of records = 900
+Symbol = '1-0149', # of records = 227
+Symbol = '0-0051', # of records = 941
+Symbol = '0-0028', # of records = 944
+Symbol = '2-0081', # of records = 54
+Symbol = '4-0606', # of records = 14
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 862460
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0051'
+Common symbol #1 = '0-0013'
+Common symbol #2 = '0-0060'
+Common symbol #3 = '0-0028'
+Common symbol #4 = '0-0092'
+Random symbol #0 = '0-0068'
+Random symbol #1 = '0-0055'
+Random symbol #2 = '1-0037'
+Random symbol #3 = '1-0154'
+Random symbol #4 = '0-0074'
+Random symbol #5 = '0-0067'
+Random symbol #6 = '1-0155'
+Random symbol #7 = '0-0084'
+Random symbol #8 = '1-0177'
+Random symbol #9 = '1-0188'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 941
+Symbol = '0-0013', # of records = 915
+Symbol = '0-0060', # of records = 912
+Symbol = '0-0028', # of records = 944
+Symbol = '0-0092', # of records = 925
+Checking random symbols
+Symbol = '0-0068', # of records = 919
+Symbol = '0-0055', # of records = 885
+Symbol = '1-0037', # of records = 228
+Symbol = '1-0154', # of records = 236
+Symbol = '0-0074', # of records = 885
+Symbol = '0-0067', # of records = 891
+Symbol = '1-0155', # of records = 240
+Symbol = '0-0084', # of records = 838
+Symbol = '1-0177', # of records = 219
+Symbol = '1-0188', # of records = 225
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 785
+Symbol = '0-0030', # of records = 880
+Symbol = '0-0042', # of records = 955
+Symbol = '0-0051', # of records = 838
+Symbol = '0-0084', # of records = 656
+Checking random symbols
+Symbol = '0-0058', # of records = 1034
+Symbol = '0-0005', # of records = 645
+Symbol = '3-0146', # of records = 35
+Symbol = '0-0064', # of records = 872
+Symbol = '0-0065', # of records = 736
+Symbol = '1-0133', # of records = 178
+Symbol = '0-0044', # of records = 658
+Symbol = '2-0382', # of records = 77
+Symbol = '0-0084', # of records = 656
+Symbol = '1-0070', # of records = 218
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 653
+Symbol = '0-0082', # of records = 732
+Symbol = '0-0062', # of records = 942
+Symbol = '0-0092', # of records = 991
+Symbol = '0-0076', # of records = 1041
+Checking random symbols
+Symbol = '3-0772', # of records = 35
+Symbol = '0-0041', # of records = 959
+Symbol = '1-0043', # of records = 223
+Symbol = '0-0004', # of records = 1040
+Symbol = '1-0135', # of records = 159
+Symbol = '2-0067', # of records = 70
+Symbol = '0-0070', # of records = 977
+Symbol = '0-0052', # of records = 1025
+Symbol = '2-0128', # of records = 107
+Symbol = '3-0125', # of records = 29
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 890
+Symbol = '0-0031', # of records = 930
+Symbol = '0-0029', # of records = 807
+Symbol = '0-0059', # of records = 733
+Symbol = '0-0006', # of records = 1079
+Checking random symbols
+Symbol = '3-0740', # of records = 10
+Symbol = '1-0003', # of records = 241
+Symbol = '0-0067', # of records = 876
+Symbol = '2-0365', # of records = 30
+Symbol = '0-0088', # of records = 1217
+Symbol = '0-0017', # of records = 903
+Symbol = '3-0402', # of records = 62
+Symbol = '0-0095', # of records = 844
+Symbol = '1-0125', # of records = 222
+Symbol = '1-0044', # of records = 210
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 930
+Symbol = '0-0079', # of records = 970
+Symbol = '0-0012', # of records = 870
+Symbol = '0-0057', # of records = 883
+Symbol = '0-0005', # of records = 638
+Checking random symbols
+Symbol = '2-0197', # of records = 49
+Symbol = '0-0070', # of records = 975
+Symbol = '0-0035', # of records = 907
+Symbol = '0-0012', # of records = 870
+Symbol = '0-0093', # of records = 818
+Symbol = '1-0149', # of records = 271
+Symbol = '0-0051', # of records = 803
+Symbol = '0-0028', # of records = 715
+Symbol = '2-0081', # of records = 60
+Symbol = '4-0606', # of records = 29
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 803
+Symbol = '0-0013', # of records = 789
+Symbol = '0-0060', # of records = 718
+Symbol = '0-0028', # of records = 715
+Symbol = '0-0092', # of records = 998
+Checking random symbols
+Symbol = '0-0068', # of records = 973
+Symbol = '0-0055', # of records = 897
+Symbol = '1-0037', # of records = 343
+Symbol = '1-0154', # of records = 148
+Symbol = '0-0074', # of records = 943
+Symbol = '0-0067', # of records = 889
+Symbol = '1-0155', # of records = 297
+Symbol = '0-0084', # of records = 662
+Symbol = '1-0177', # of records = 176
+Symbol = '1-0188', # of records = 221
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 588
+Symbol = '0-0030', # of records = 717
+Symbol = '0-0042', # of records = 974
+Symbol = '0-0051', # of records = 827
+Symbol = '0-0084', # of records = 657
+Checking random symbols
+Symbol = '0-0058', # of records = 1018
+Symbol = '0-0005', # of records = 616
+Symbol = '3-0146', # of records = 54
+Symbol = '0-0064', # of records = 835
+Symbol = '0-0065', # of records = 969
+Symbol = '1-0133', # of records = 246
+Symbol = '0-0044', # of records = 613
+Symbol = '2-0382', # of records = 77
+Symbol = '0-0084', # of records = 657
+Symbol = '1-0070', # of records = 307
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 763
+Symbol = '0-0082', # of records = 688
+Symbol = '0-0062', # of records = 970
+Symbol = '0-0092', # of records = 1051
+Symbol = '0-0076', # of records = 1036
+Checking random symbols
+Symbol = '3-0772', # of records = 1
+Symbol = '0-0041', # of records = 1004
+Symbol = '1-0043', # of records = 271
+Symbol = '0-0004', # of records = 1166
+Symbol = '1-0135', # of records = 206
+Symbol = '2-0067', # of records = 115
+Symbol = '0-0070', # of records = 795
+Symbol = '0-0052', # of records = 1045
+Symbol = '2-0128', # of records = 69
+Symbol = '3-0125', # of records = 30
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 916
+Symbol = '0-0031', # of records = 778
+Symbol = '0-0029', # of records = 734
+Symbol = '0-0059', # of records = 704
+Symbol = '0-0006', # of records = 1306
+Checking random symbols
+Symbol = '3-0740', # of records = 37
+Symbol = '1-0003', # of records = 249
+Symbol = '0-0067', # of records = 992
+Symbol = '2-0365', # of records = 2
+Symbol = '0-0088', # of records = 1045
+Symbol = '0-0017', # of records = 839
+Symbol = '3-0402', # of records = 6
+Symbol = '0-0095', # of records = 845
+Symbol = '1-0125', # of records = 267
+Symbol = '1-0044', # of records = 116
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 852
+Symbol = '0-0079', # of records = 975
+Symbol = '0-0012', # of records = 695
+Symbol = '0-0057', # of records = 787
+Symbol = '0-0005', # of records = 615
+Checking random symbols
+Symbol = '2-0197', # of records = 20
+Symbol = '0-0070', # of records = 776
+Symbol = '0-0035', # of records = 1116
+Symbol = '0-0012', # of records = 695
+Symbol = '0-0093', # of records = 808
+Symbol = '1-0149', # of records = 276
+Symbol = '0-0051', # of records = 815
+Symbol = '0-0028', # of records = 821
+Symbol = '2-0081', # of records = 67
+Symbol = '4-0606', # of records = 44
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 815
+Symbol = '0-0013', # of records = 830
+Symbol = '0-0060', # of records = 561
+Symbol = '0-0028', # of records = 821
+Symbol = '0-0092', # of records = 1058
+Checking random symbols
+Symbol = '0-0068', # of records = 895
+Symbol = '0-0055', # of records = 753
+Symbol = '1-0037', # of records = 284
+Symbol = '1-0154', # of records = 78
+Symbol = '0-0074', # of records = 797
+Symbol = '0-0067', # of records = 985
+Symbol = '1-0155', # of records = 328
+Symbol = '0-0084', # of records = 648
+Symbol = '1-0177', # of records = 204
+Symbol = '1-0188', # of records = 243
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 653
+Symbol = '0-0030', # of records = 910
+Symbol = '0-0042', # of records = 1023
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0084', # of records = 488
+Checking random symbols
+Symbol = '0-0058', # of records = 907
+Symbol = '0-0005', # of records = 513
+Symbol = '3-0146', # of records = 66
+Symbol = '0-0064', # of records = 716
+Symbol = '0-0065', # of records = 956
+Symbol = '1-0133', # of records = 293
+Symbol = '0-0044', # of records = 562
+Symbol = '2-0382', # of records = 73
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0070', # of records = 326
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 746
+Symbol = '0-0082', # of records = 607
+Symbol = '0-0062', # of records = 991
+Symbol = '0-0092', # of records = 1003
+Symbol = '0-0076', # of records = 1175
+Checking random symbols
+Symbol = '3-0772', # of records = 0
+Symbol = '0-0041', # of records = 962
+Symbol = '1-0043', # of records = 305
+Symbol = '0-0004', # of records = 997
+Symbol = '1-0135', # of records = 211
+Symbol = '2-0067', # of records = 124
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0052', # of records = 950
+Symbol = '2-0128', # of records = 96
+Symbol = '3-0125', # of records = 57
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 1022
+Symbol = '0-0031', # of records = 809
+Symbol = '0-0029', # of records = 676
+Symbol = '0-0059', # of records = 607
+Symbol = '0-0006', # of records = 1286
+Checking random symbols
+Symbol = '3-0740', # of records = 24
+Symbol = '1-0003', # of records = 290
+Symbol = '0-0067', # of records = 804
+Symbol = '2-0365', # of records = 39
+Symbol = '0-0088', # of records = 1096
+Symbol = '0-0017', # of records = 1063
+Symbol = '3-0402', # of records = 12
+Symbol = '0-0095', # of records = 1010
+Symbol = '1-0125', # of records = 282
+Symbol = '1-0044', # of records = 149
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 826
+Symbol = '0-0079', # of records = 838
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0057', # of records = 653
+Symbol = '0-0005', # of records = 513
+Checking random symbols
+Symbol = '2-0197', # of records = 25
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0035', # of records = 1177
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0093', # of records = 899
+Symbol = '1-0149', # of records = 411
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0028', # of records = 786
+Symbol = '2-0081', # of records = 87
+Symbol = '4-0606', # of records = 32
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0013', # of records = 1079
+Symbol = '0-0060', # of records = 641
+Symbol = '0-0028', # of records = 786
+Symbol = '0-0092', # of records = 1003
+Checking random symbols
+Symbol = '0-0068', # of records = 948
+Symbol = '0-0055', # of records = 763
+Symbol = '1-0037', # of records = 264
+Symbol = '1-0154', # of records = 24
+Symbol = '0-0074', # of records = 795
+Symbol = '0-0067', # of records = 804
+Symbol = '1-0155', # of records = 321
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0177', # of records = 164
+Symbol = '1-0188', # of records = 219
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 653
+Symbol = '0-0030', # of records = 910
+Symbol = '0-0042', # of records = 1023
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0084', # of records = 488
+Checking random symbols
+Symbol = '0-0058', # of records = 907
+Symbol = '0-0005', # of records = 513
+Symbol = '3-0146', # of records = 66
+Symbol = '0-0064', # of records = 716
+Symbol = '0-0065', # of records = 956
+Symbol = '1-0133', # of records = 293
+Symbol = '0-0044', # of records = 562
+Symbol = '2-0382', # of records = 73
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0070', # of records = 326
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 746
+Symbol = '0-0082', # of records = 607
+Symbol = '0-0062', # of records = 991
+Symbol = '0-0092', # of records = 1003
+Symbol = '0-0076', # of records = 1175
+Checking random symbols
+Symbol = '3-0772', # of records = 0
+Symbol = '0-0041', # of records = 962
+Symbol = '1-0043', # of records = 305
+Symbol = '0-0004', # of records = 997
+Symbol = '1-0135', # of records = 211
+Symbol = '2-0067', # of records = 124
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0052', # of records = 950
+Symbol = '2-0128', # of records = 96
+Symbol = '3-0125', # of records = 57
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 1022
+Symbol = '0-0031', # of records = 809
+Symbol = '0-0029', # of records = 676
+Symbol = '0-0059', # of records = 607
+Symbol = '0-0006', # of records = 1286
+Checking random symbols
+Symbol = '3-0740', # of records = 24
+Symbol = '1-0003', # of records = 290
+Symbol = '0-0067', # of records = 804
+Symbol = '2-0365', # of records = 39
+Symbol = '0-0088', # of records = 1096
+Symbol = '0-0017', # of records = 1063
+Symbol = '3-0402', # of records = 12
+Symbol = '0-0095', # of records = 1010
+Symbol = '1-0125', # of records = 282
+Symbol = '1-0044', # of records = 149
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 826
+Symbol = '0-0079', # of records = 838
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0057', # of records = 653
+Symbol = '0-0005', # of records = 513
+Checking random symbols
+Symbol = '2-0197', # of records = 25
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0035', # of records = 1177
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0093', # of records = 899
+Symbol = '1-0149', # of records = 411
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0028', # of records = 786
+Symbol = '2-0081', # of records = 87
+Symbol = '4-0606', # of records = 32
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0013', # of records = 1079
+Symbol = '0-0060', # of records = 641
+Symbol = '0-0028', # of records = 786
+Symbol = '0-0092', # of records = 1003
+Checking random symbols
+Symbol = '0-0068', # of records = 948
+Symbol = '0-0055', # of records = 763
+Symbol = '1-0037', # of records = 264
+Symbol = '1-0154', # of records = 24
+Symbol = '0-0074', # of records = 795
+Symbol = '0-0067', # of records = 804
+Symbol = '1-0155', # of records = 321
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0177', # of records = 164
+Symbol = '1-0188', # of records = 219
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 653
+Symbol = '0-0030', # of records = 910
+Symbol = '0-0042', # of records = 1023
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0084', # of records = 488
+Checking random symbols
+Symbol = '0-0058', # of records = 907
+Symbol = '0-0005', # of records = 513
+Symbol = '3-0146', # of records = 66
+Symbol = '0-0064', # of records = 716
+Symbol = '0-0065', # of records = 956
+Symbol = '1-0133', # of records = 293
+Symbol = '0-0044', # of records = 562
+Symbol = '2-0382', # of records = 73
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0070', # of records = 326
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 746
+Symbol = '0-0082', # of records = 607
+Symbol = '0-0062', # of records = 991
+Symbol = '0-0092', # of records = 1003
+Symbol = '0-0076', # of records = 1175
+Checking random symbols
+Symbol = '3-0772', # of records = 0
+Symbol = '0-0041', # of records = 962
+Symbol = '1-0043', # of records = 305
+Symbol = '0-0004', # of records = 997
+Symbol = '1-0135', # of records = 211
+Symbol = '2-0067', # of records = 124
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0052', # of records = 950
+Symbol = '2-0128', # of records = 96
+Symbol = '3-0125', # of records = 57
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 1022
+Symbol = '0-0031', # of records = 809
+Symbol = '0-0029', # of records = 676
+Symbol = '0-0059', # of records = 607
+Symbol = '0-0006', # of records = 1286
+Checking random symbols
+Symbol = '3-0740', # of records = 24
+Symbol = '1-0003', # of records = 290
+Symbol = '0-0067', # of records = 804
+Symbol = '2-0365', # of records = 39
+Symbol = '0-0088', # of records = 1096
+Symbol = '0-0017', # of records = 1063
+Symbol = '3-0402', # of records = 12
+Symbol = '0-0095', # of records = 1010
+Symbol = '1-0125', # of records = 282
+Symbol = '1-0044', # of records = 149
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 826
+Symbol = '0-0079', # of records = 838
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0057', # of records = 653
+Symbol = '0-0005', # of records = 513
+Checking random symbols
+Symbol = '2-0197', # of records = 25
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0035', # of records = 1177
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0093', # of records = 899
+Symbol = '1-0149', # of records = 411
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0028', # of records = 786
+Symbol = '2-0081', # of records = 87
+Symbol = '4-0606', # of records = 32
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0013', # of records = 1079
+Symbol = '0-0060', # of records = 641
+Symbol = '0-0028', # of records = 786
+Symbol = '0-0092', # of records = 1003
+Checking random symbols
+Symbol = '0-0068', # of records = 948
+Symbol = '0-0055', # of records = 763
+Symbol = '1-0037', # of records = 264
+Symbol = '1-0154', # of records = 24
+Symbol = '0-0074', # of records = 795
+Symbol = '0-0067', # of records = 804
+Symbol = '1-0155', # of records = 321
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0177', # of records = 164
+Symbol = '1-0188', # of records = 219
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 653
+Symbol = '0-0030', # of records = 910
+Symbol = '0-0042', # of records = 1023
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0084', # of records = 488
+Checking random symbols
+Symbol = '0-0058', # of records = 907
+Symbol = '0-0005', # of records = 513
+Symbol = '3-0146', # of records = 66
+Symbol = '0-0064', # of records = 716
+Symbol = '0-0065', # of records = 956
+Symbol = '1-0133', # of records = 293
+Symbol = '0-0044', # of records = 562
+Symbol = '2-0382', # of records = 73
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0070', # of records = 326
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 746
+Symbol = '0-0082', # of records = 607
+Symbol = '0-0062', # of records = 991
+Symbol = '0-0092', # of records = 1003
+Symbol = '0-0076', # of records = 1175
+Checking random symbols
+Symbol = '3-0772', # of records = 0
+Symbol = '0-0041', # of records = 962
+Symbol = '1-0043', # of records = 305
+Symbol = '0-0004', # of records = 997
+Symbol = '1-0135', # of records = 211
+Symbol = '2-0067', # of records = 124
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0052', # of records = 950
+Symbol = '2-0128', # of records = 96
+Symbol = '3-0125', # of records = 57
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 1022
+Symbol = '0-0031', # of records = 809
+Symbol = '0-0029', # of records = 676
+Symbol = '0-0059', # of records = 607
+Symbol = '0-0006', # of records = 1286
+Checking random symbols
+Symbol = '3-0740', # of records = 24
+Symbol = '1-0003', # of records = 290
+Symbol = '0-0067', # of records = 804
+Symbol = '2-0365', # of records = 39
+Symbol = '0-0088', # of records = 1096
+Symbol = '0-0017', # of records = 1063
+Symbol = '3-0402', # of records = 12
+Symbol = '0-0095', # of records = 1010
+Symbol = '1-0125', # of records = 282
+Symbol = '1-0044', # of records = 149
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 826
+Symbol = '0-0079', # of records = 838
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0057', # of records = 653
+Symbol = '0-0005', # of records = 513
+Checking random symbols
+Symbol = '2-0197', # of records = 25
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0035', # of records = 1177
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0093', # of records = 899
+Symbol = '1-0149', # of records = 411
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0028', # of records = 786
+Symbol = '2-0081', # of records = 87
+Symbol = '4-0606', # of records = 32
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0013', # of records = 1079
+Symbol = '0-0060', # of records = 641
+Symbol = '0-0028', # of records = 786
+Symbol = '0-0092', # of records = 1003
+Checking random symbols
+Symbol = '0-0068', # of records = 948
+Symbol = '0-0055', # of records = 763
+Symbol = '1-0037', # of records = 264
+Symbol = '1-0154', # of records = 24
+Symbol = '0-0074', # of records = 795
+Symbol = '0-0067', # of records = 804
+Symbol = '1-0155', # of records = 321
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0177', # of records = 164
+Symbol = '1-0188', # of records = 219
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0037', # of records = 653
+Symbol = '0-0030', # of records = 910
+Symbol = '0-0042', # of records = 1023
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0084', # of records = 488
+Checking random symbols
+Symbol = '0-0058', # of records = 907
+Symbol = '0-0005', # of records = 513
+Symbol = '3-0146', # of records = 66
+Symbol = '0-0064', # of records = 716
+Symbol = '0-0065', # of records = 956
+Symbol = '1-0133', # of records = 293
+Symbol = '0-0044', # of records = 562
+Symbol = '2-0382', # of records = 73
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0070', # of records = 326
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0066', # of records = 746
+Symbol = '0-0082', # of records = 607
+Symbol = '0-0062', # of records = 991
+Symbol = '0-0092', # of records = 1003
+Symbol = '0-0076', # of records = 1175
+Checking random symbols
+Symbol = '3-0772', # of records = 0
+Symbol = '0-0041', # of records = 962
+Symbol = '1-0043', # of records = 305
+Symbol = '0-0004', # of records = 997
+Symbol = '1-0135', # of records = 211
+Symbol = '2-0067', # of records = 124
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0052', # of records = 950
+Symbol = '2-0128', # of records = 96
+Symbol = '3-0125', # of records = 57
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 1022
+Symbol = '0-0031', # of records = 809
+Symbol = '0-0029', # of records = 676
+Symbol = '0-0059', # of records = 607
+Symbol = '0-0006', # of records = 1286
+Checking random symbols
+Symbol = '3-0740', # of records = 24
+Symbol = '1-0003', # of records = 290
+Symbol = '0-0067', # of records = 804
+Symbol = '2-0365', # of records = 39
+Symbol = '0-0088', # of records = 1096
+Symbol = '0-0017', # of records = 1063
+Symbol = '3-0402', # of records = 12
+Symbol = '0-0095', # of records = 1010
+Symbol = '1-0125', # of records = 282
+Symbol = '1-0044', # of records = 149
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0023', # of records = 826
+Symbol = '0-0079', # of records = 838
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0057', # of records = 653
+Symbol = '0-0005', # of records = 513
+Checking random symbols
+Symbol = '2-0197', # of records = 25
+Symbol = '0-0070', # of records = 793
+Symbol = '0-0035', # of records = 1177
+Symbol = '0-0012', # of records = 793
+Symbol = '0-0093', # of records = 899
+Symbol = '1-0149', # of records = 411
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0028', # of records = 786
+Symbol = '2-0081', # of records = 87
+Symbol = '4-0606', # of records = 32
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0051', # of records = 735
+Symbol = '0-0013', # of records = 1079
+Symbol = '0-0060', # of records = 641
+Symbol = '0-0028', # of records = 786
+Symbol = '0-0092', # of records = 1003
+Checking random symbols
+Symbol = '0-0068', # of records = 948
+Symbol = '0-0055', # of records = 763
+Symbol = '1-0037', # of records = 264
+Symbol = '1-0154', # of records = 24
+Symbol = '0-0074', # of records = 795
+Symbol = '0-0067', # of records = 804
+Symbol = '1-0155', # of records = 321
+Symbol = '0-0084', # of records = 488
+Symbol = '1-0177', # of records = 164
+Symbol = '1-0188', # of records = 219
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Sparse writer test - test writing to random locations in the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = -1
+	index type = ea
+Using generator random seed (used in sparse test only): 901730
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_sparse_writer
+Parameters:
+	# of records between flushes = 1000
+	# of records to write = 20000
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding records
+SWMR_WRITER_MESSAGE is found
+launch 3 swmr_sparse_readers
+Closing datasets
+Releasing symbols
+Closing objects
+
+*******************************************************************************
+** Loop testing parameters: -i ea -c 5
+*******************************************************************************
+
+
+###############################################################################
+## Generator test
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = 5
+	index type = ea
+Using generator random seed (used in sparse test only): 796228
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_generator with SWMR_WRITE
+Parameters:
+	swmr writes on
+	compression level = 5
+	index type = ea
+Using generator random seed (used in sparse test only): 969996
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+
+###############################################################################
+## Use H5Fstart_swmr_write() to enable SWMR writing mode
+###############################################################################
+launch the swmr_start_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 161621
+Using reader random seed: 487675
+Using reader random seed: 500783
+Using reader random seed: 504237
+Using reader random seed: 506304
+Using reader random seed: 505655
+
+###############################################################################
+## Writer test - test expanding the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes on
+	compression level = 5
+	index type = ea
+Using generator random seed (used in sparse test only): 535671
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 727065
+Using reader random seed: 884731
+Using reader random seed: 891670
+Using reader random seed: 891181
+Using reader random seed: 900911
+Using reader random seed: 900701
+
+###############################################################################
+## Remove test - test shrinking the dataset
+###############################################################################
+launch the swmr_remove_writer
+Parameters:
+	# of shrinks between flushes = 1000
+	# of shrinks = 40000
+Using writer random seed: 933787
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 83091
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0028'
+Common symbol #1 = '0-0000'
+Common symbol #2 = '0-0025'
+Common symbol #3 = '0-0047'
+Common symbol #4 = '0-0010'
+Random symbol #0 = '0-0047'
+Random symbol #1 = '0-0024'
+Random symbol #2 = '0-0019'
+Random symbolParameters:
+	# of seconds between polling =  #3 = '2-0144'
+Random symbol #4 = '1-0016'
+Random symbol #5 = '0-0002'
+Random symbol #6 = '0-0088'
+Random symbol #7 = '2-0365'
+Random symbol #8 = '1-0014'
+Random symbol #9 = '0-0023'
+Reading records
+Opening file: swmr_data.h5
+1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 89226
+Generating symbol names
+Checking common symbols
+Symbol = '0-0028', # of records = 832
+Symbol = '0-0000', # of records = 831
+Symbol = '0-0025', # of recordChoosing datasets
+Common symbol #0 = '0-0009'
+Common symbol #1 = '0-0053'
+Common symbol #2 = '0-0092'
+Common symbol #3 = '0-0087'
+Common symbol #4 = '0-0055'
+Random symbol #0 = '1-0102'
+Random symbol #1 = '0-0001'
+Random symbol #2 = '4-0085'
+Random symbol #3 = '0-0029'
+Random symbol #4 = '0-0031'
+Random symbol #5 = '0-0033'
+Random symbol #6 = '1-0190'
+Random symbol #7 = '1-0126'
+Random symbol #8 = '0-0099'
+Random symbol #9 = '1-0107'
+sReading records
+ =Opening file: swmr_data.h5
+ 873
+Symbol = '0-0047', # of records = 826Checking common symbols
+
+SymbParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 91062
+Generating symbol names
+olSymbol = '0-0009', # of records = 835
+ = '0-0010', # of reSymbol = '0-0053', # of records = 811
+cords = 836Symbol = '0-0092', # of records = 871
+
+ChCoSymbol = '0-0087', #o of records = s864
+ihnegc kdiantgSymbol = '0-0055',a # of records = s870
+e trsChecking rando
+m symbols
+Caommon symbol #0 = '0-0007'
+Common symbol #1 = '0-0035'
+Common symbol #2 = '0-0044'
+Common symbol #3 = '0-0096'
+Common symbol #4 = '0-0028'
+Random symbol #0 = '1-0198'
+Random symbol #1 = '2-0317'
+Random symbol #2 = '1-0101'
+Random symbol #3 = '1-0122'
+Random symbol #4 = '2-0095'
+Random symbol #5 = '2-0268'
+Random symbol #6 = '0-0059'
+Random symbol #7 = '0-0007'
+Random symbol #8 = '1-0121'
+Random symbol #9 = '0-0000'
+Symbol = '1-0102', # of records = 241
+RSymbol = '0-0001', # of records = 847
+Symbol = '4-0085', # of records = 20
+enaddoimnSymbol g= '0-0029', # of reco rds = 907
+r escyomrbdosSymbol
+ = '0-0031', # of records = 857
+lOsp
+eninSymbol = '0-0033', # gof records =  854
+fiSlyem:b oswmr_data.h5l
+Symbol = '1-0190', # of records = 235
+ = '0-0047',Symbol = '1-0126', # of records = 221
+ # of Symbol = '0-0099', # of records = 876
+recordsSymbol = '1-0107', # of records = 220
+ =Closing file
+ 826
+ChecSkyimnbgo lc o=m 'mo0-0024n' ,s y#m boofl sr
+ecords = 778
+SymbSoylm b=o l' 0-0019=' ,' #0-0007 'o,f  #r eocfo rrdesc o=r d852s
+ = 902
+Symbol = '2-0144S'y,m b#o lo f=  r'ec0-0035o'r,d s#  =o f59 
+records S=y m864
+bol = '1-0016', S#y mobfo lr e=c or'd0-0044s' ,= 215
+Symbol =  '#0-0002 'o,f  #r eocfo rrdesc o=r ds925 
+= 869
+SySmybmbooll  ==  ''0-00960-0088'',,  ##  ooff  rreeccoorrddss  ==  892900
+
+SSyymmbbooll  ==  ''0-00282-0365'',,  ##  ooff  rreeccoorrddss  ==  63832
+
+ChParaSymeters:
+	# of seconds between polling = mbeocl1
+	#  of common symbol=s to poll =  5
+	# of random 'symbols to poll = 10
+	1-0014# of seconds 'to test = 3
+,Using rea der random seed#: 99154
+Generatin g symbol names
+okfi nrge croradnsd o=m  247s
+ymbols
+SymboSl y=m b'o0-0023l' ,=  #' o1-0198f' ,r e#c oorfds  r=e c863o
+rds C=l o221si
+ng file
+Symbol = '2-0317', # of records = 56
+Symbol = '1-0101', # of records = 227
+Symbol = '1-0122', # of records = 239
+Symbol = '2-0095', # of records = 47
+Symbol = '2-0268', # of records = 51
+Symbol = '0-0059', # of records = 871
+Symbol = '0-0007', # of records = 902
+Symbol = '1-0121', # of records = 190
+Choosing datasets
+Common symbol #0 = '0-0032'
+Common symbol #1 = '0-0096'
+Common symbol #2 = '0-0004'
+Common symbol #3 = '0-0028'
+Common symbol #4 = '0-0015'
+Random symbol #0 = '0-0050'
+Random symbol #1 = '0-0065'
+Random symbol #2 = '1-0175'
+Random symbol #3 = '0-0040'
+Random symbol #4 = '3-0728'
+Random symbol #5 = '0-0092'
+Random symbol #6 = '4-0190'
+Random symbol #7 = '3-0482'
+Random symbol #8 = '1-0042'
+Random symbol #9 = '4-0005'
+Reading records
+Opening file: swmr_data.h5
+Symbol = '0-0000', # of records = 831
+Closing file
+Checking common symbols
+Symbol = '0-0032', # of records = 875
+Symbol = '0-0096', # of records = 892
+Symbol = '0-0004', # of records = 945
+Symbol = '0-0028', # of records = 832
+Symbol = '0-0015', # of records = 827
+Checking random symbols
+Symbol = '0-0050', # of records = 833
+Symbol = '0-0065', # of records = 884
+Symbol = '1-0175', # of records = 184
+Symbol = '0-0040', # of records = 841
+Symbol = '3-0728', # of records = 35
+Symbol = '0-0092', # of records = 871
+Symbol = '4-0190', # of records = 20
+Symbol = '3-0482', # of records = 31
+Symbol = '1-0042', # of records = 171
+Symbol = '4-0005', # of records = 21
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 107871
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0098'
+Common symbol #1 = '0-0036'
+Common symbol #2 = '0-0002'
+Common symbol #3 = '0-0036'
+Common symbol #4 = '0-0023'
+Random symbol #0 = '1-0186'
+Random symbol #1 = '4-0655'
+Random symbol #2 = '0-0091'
+Random symbol #3 = '0-0080'
+Random symbol #4 = '0-0073'
+Random symbol #5 = '1-0175'
+Random symbol #6 = '0-0053'
+Random symbol #7 = '0-0085'
+Random symbol #8 = '0-0086'
+Random symbol #9 = '0-0042'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 867
+Symbol = '0-0036', # of records = 800
+Symbol = '0-0002', # of records = 869
+Symbol = '0-0036', # of records = 800
+Symbol = '0-0023', # of records = 863
+Checking random symbols
+Symbol = '1-0186', # of records = 221
+Symbol = '4-0655', # of records = 15
+Symbol = '0-0091', # of records = 853
+Symbol = '0-0080', # of records = 851
+Symbol = '0-0073', # of records = 826
+Symbol = '1-0175', # of records = 182
+Symbol = '0-0053', # of records = 811
+Symbol = '0-0085', # of records = 876
+Symbol = '0-0086', # of records = 871
+Symbol = '0-0042', # of records = 908
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0092', # of records = 0
+Symbol = '0-0087', # of records = 0
+Symbol = '0-0055', # of records = 0
+Checking random symbols
+Symbol = '1-0102', # of records = 45
+Symbol = '0-0001', # of records = 0
+Symbol = '4-0085', # of records = 0
+Symbol = '0-0029', # of records = 0
+Symbol = '0-0031', # of records = 0
+Symbol = '0-0033', # of records = 0
+Symbol = '1-0190', # of records = 0
+Symbol = '1-0126', # of records = 28
+Symbol = '0-0099', # of records = 0
+Symbol = '1-0107', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0028', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0025', # of records = 0
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0010', # of records = 0
+Checking random symbols
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0024', # of records = 0
+Opening file: swmr_data.h5
+Symbol = '0-0019', # of records = 0
+Symbol = '2-0144', # of records = 21
+Symbol = '1-0016', # of records = 0
+Symbol = '0-0002', # of records = 0
+Symbol = '0-0088', # of records = 0
+Symbol = '2-0365', # of records = 18
+Symbol = '1-0014', # of records = 0
+Symbol = '0-0023', # of records = 0
+Closing file
+Checking common symbols
+Symbol = '0-0007', # of records = 0
+Symbol = '0-0035', # of records = 0
+Symbol = '0-0044', # of records = 0
+Symbol = '0-0096', # of records = 21
+Symbol = '0-0028', # of records = 0
+Checking random symbols
+Symbol = '1-0198', # of records = 0
+Symbol = '2-0317', # of reOpencords = 33
+ing file: swmr_data.h5
+Symbol = '1-0101', # of records = 0
+Symbol = '1-0122', # of records = 114
+Symbol = '2-0095', # of records = 3
+Symbol = '2-0268', # of records = 0
+SymbolChec = '0-0059', # king common symbof recorols
+ds = 0
+Symbol = '0-0007', # of records = 0
+Symbol = '0-0032', # ofS recyords =mbol = ' 59
+1-0121', # of records = 0
+Symbol = '0-0000', # of records = 0Symb
+ol = '0-0096', # Cloof recorsing fileds = 21
+
+Symbol = '0-0004', # of records = 0
+Symbol = '0-0028', # of records = 0
+Symbol = '0-0015', # of records = 0
+Checking random symbols
+Symbol = '0-0050', # of records = 0
+Symbol = '0-0065', # of records = 0
+Symbol = '1-0175', # of records = 0
+Symbol = '0-0040', # of records = 0
+Symbol = '3-0728', # of records = 23
+Symbol = '0-0092', # of records = 0
+Symbol = '4-0190', # of records = 9
+Symbol = '3-0482', # of records = 10
+Symbol = '1-0042', # of records = 0
+Symbol = '4-0005', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0002', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0023', # of records = 0
+Checking random symbols
+Symbol = '1-0186', # of records = 58
+Symbol = '4-0655', # of records = 15
+Symbol = '0-0091', # of records = 14
+Symbol = '0-0080', # of records = 55
+Symbol = '0-0073', # of records = 0
+Symbol = '1-0175', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0085', # of records = 0
+Symbol = '0-0086', # of records = 0
+Symbol = '0-0042', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0092', # of records = 0
+Symbol = '0-0087', # of records = 0
+Symbol = '0-0055', # of records = 0
+Checking random symbols
+Symbol = '1-0102', # of records = 45
+Symbol = '0-0001', # of records = 0
+Symbol = '4-0085', # of records = 0
+Symbol = '0-0029', # of records = 0
+Symbol = '0-0031', # of records = 0
+Symbol = '0-0033', # of records = 0
+Symbol = '1-0190', # of records = 0
+Symbol = '1-0126', # of records = 28
+Symbol = '0-0099', # of records = 0
+Symbol = '1-0107', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0028', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0025', # of records = 0
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0010', # of records = 0
+Checking random symbols
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0024', # of records = 0
+Symbol = '0-0019', # of records = 0
+Symbol = '2-0144', # of records = 21
+Symbol = '1-0016', # of records = 0
+Symbol = '0-0002', # of records = 0
+Symbol = '0-0088', # of records = 0
+Symbol = '2-0365', # of records = 18
+Symbol = '1-0014', # of records = 0
+Symbol = '0-0023', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0032', # of records = 59
+Symbol = '0-0096', # of records = 21
+Symbol = '0-0004', # of records = 0
+Symbol = '0-0028', # of records = 0
+Symbol = '0-0015', # of records = 0
+Checking random symbols
+Symbol = '0-0050', # of records = 0
+Symbol = '0-0065', # of records = 0
+Symbol = '1-0175', # of records = 0
+Symbol = '0-0040', # of records = 0
+Symbol = '3-0728', # of records = 23
+Symbol = '0-0092', # of records = 0
+Symbol = '4-0190', # of records = 9
+Symbol = '3-0482', # of records = 10
+Symbol = '1-0042', # of records = 0
+Symbol = '4-0005', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0098', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0002', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0023', # of records = 0
+Checking random symbols
+Symbol = '1-0186', # of records = 58
+Symbol = '4-0655', # of records = 15
+Symbol = '0-0091', # of records = 14
+Symbol = '0-0080', # of records = 55
+Symbol = '0-0073', # of records = 0
+Symbol = '1-0175', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0085', # of records = 0
+Symbol = '0-0086', # of records = 0
+Symbol = '0-0042', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0007', # of records = 0
+Symbol = '0-0035', # of records = 0
+Symbol = '0-0044', # of records = 0
+Symbol = '0-0096', # of records = 21
+Symbol = '0-0028', # of records = 0
+Checking random symbols
+Symbol = '1-0198', # of records = 0
+Symbol = '2-0317', # of records = 33
+Symbol = '1-0101', # of records = 0
+Symbol = '1-0122', # of records = 114
+Symbol = '2-0095', # of records = 3
+Symbol = '2-0268', # of records = 0
+Symbol = '0-0059', # of records = 0
+Symbol = '0-0007', # of records = 0
+Symbol = '1-0121', # of records = 0
+Symbol = '0-0000', # of records = 0
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Add/remove test - randomly grow or shrink the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = 5
+	index type = ea
+Using generator random seed (used in sparse test only): 133334
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+Using writer random seed: 325315
+launch the swmr_addrem_writer
+Parameters:
+	# of operations between flushes = 1000
+	# of operations = 200000
+Using writer random seed: 940754
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding and removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 90402
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0024'
+Common symbol #1 = '0-0025'
+Common symbol #2 = '0-0069'
+Common symbol #3 = '0-0032'
+Common symbol #4 = '0-0078'
+Random symbol #0 = '4-0836'
+Random symbol #1 = '2-0204'
+Random symbol #2 = '0-0030'
+Random symbol #3 = '1-0186'
+Random symbol #4 = '3-0010'
+Random symbol #5 = '0-0079'
+Random symbol #6 = '2-0139'
+Random symbol #7 = '4-0820'
+Random symbol #8 = '0-0078'
+Random symbol #9 = '3-0123'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0024', # of records = 903
+Symbol = '0-0025', # of records = 890
+Symbol = '0-0069', # of records = 920
+Symbol = '0-0032', # of records = 950
+Symbol = '0-0078', # of records = 868
+Checking random symbols
+Symbol = '4-0836', # of records = 17
+Symbol = '2-0204', # of records = 52
+Symbol = '0-0030', # of records = 929
+Symbol = '1-0186', # of records = 225
+Symbol = '3-0010', # of records = 27
+Symbol = '0-0079', # of records = 946
+Symbol = '2-0139', # of records = 61
+SymParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 98344
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0049'
+Common symbol #1 = '0-0018'
+Common symbol #2 = '0-0052'
+Common symbol #3 = '0-0037'
+Common symbol #4 = '0-0081'
+Random symbol #0 = '0-0080'
+Random symbol #1 = '2-0321'
+Random symbol #2 = '0-0075'
+Random symbol #3 = '1-0104'
+Random symbol #4 = '3-0007'
+Random symbol #5 = '1-0019'
+Random symbol #6 = '0-0069'
+Random symbol #7 = '1-0046'
+Random symbol #8 = '1-0138'
+Random symbol #9 = '0-0007'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 917
+Symbol = '0-0018', # of records = 892
+Symbol = '0-0052', # of records = 928
+Symbol = '0-0037', # of records = 893
+Symbol = '0-0081', # of records = 914
+Checking random symbols
+Symbol = '0-0080', # of records = 831
+Symbol = '2-0321', # of records = 57
+Symbol = '0-0075', # of records = 855
+Symbol = '1-0104', # of records = 230
+Symbol = '3-0007', # of records = 21
+Symbol = '1-0019', # of records = 206
+Symbol = '0-0069', # of records = 920
+Symbol = '1-0046', # of records = 230
+Symbol = '1-0138', # of records = 202
+Symbol = '0-0007', # of records = 908
+Closing file
+bol = '4-0820', # of records = 7
+Symbol = '0-0078', # of records = 868
+Symbol = '3-0123', # of records = 34
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 106020
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0075'
+Common symbol #1 = '0-0032'
+Common symbol #2 = '0-0095'
+Common symbol #3 = '0-0058'
+Common symbol #4 = '0-0016'
+Random symbol #0 = '3-0635'
+Random symbol #1 = '0-0090'
+Random symbol #2 = '0-0038'
+Random symbol #3 = '1-0001'
+Random symbol #4 = '2-0228'
+Random symbol #5 = '2-0285'
+Random symbol #6 = '1-0011'
+Random symbol #7 = '3-0688'
+Random symbol #8 = '2-0006'
+Random symbol #9 = '4-1552'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 857
+Symbol = '0-0032', # of records = 964
+Symbol = '0-0095', # of records = 894
+Symbol = '0-0058', # of records = 893
+Symbol = '0-0016', # of records = 830
+Checking random symbols
+Symbol = '3-0635', # of records = 28
+Symbol = '0-0090', # of records = 863
+Symbol = '0-0038', # of records = 838
+Symbol = '1-0001', # of records = 202
+Symbol = '2-0228', # of records = 65
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 110246
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0000'
+Common symbol #1 = '0-0076'
+Common symbol #2 = '0-0088'
+Common symbol #3 = '0-0028'
+Common symbol #4 = '0-0085'
+Random symbol #0 = '0-0048'
+Random symbol #1 = '1-0171'
+Random symbol #2 = '0-0078'
+Random symbol #3 = '0-0068Symbol = '2-0285', # of' 
+Random symbol #r4 = '0-0018'
+Ranedom symbol #5c = '0-0069'
+Randomo symbol #6r = '0-0012'
+Randomd symbol #7 = s'0-0072'
+Random s ymbol #8 = '=4-1541'
+Random sym bol #9 = '2-0389'
+55Reading records
+
+Opening file: swmr_data.h5
+Symbol = '1-0011', # of records = 222
+Symbol = '3-0688', # of records = 27
+Symbol = '2-0006', # of records = 55
+Symbol = '4-1552', # of records = 14
+Closing file
+Checking common symbols
+Symbol = '0-0000', # of records = 843
+Symbol = '0-0076', # of records = 865
+Symbol = '0-0088', # of records = 894
+Symbol = '0-0028', # of records = 938
+Symbol = '0-0085', # of records = 896
+Checking random symbols
+Symbol = '0-0048', # of records = 895
+Symbol = '1-0171', # of records = 229
+Symbol = '0-0078', # of records = 873
+Symbol = '0-0068', # of records = 866
+Symbol = '0-0018', # of records = 896
+Symbol = '0-0069', # of records = 915
+Symbol = '0-0012', # of records = 913
+Symbol = '0-0072', # of records = 857
+Symbol = '4-1541', # of records = 11
+Symbol = '2-0389', # of records = 38
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 119174
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0049'
+Common symbol #1 = '0-0020'
+Common symbol #2 = '0-0033'
+Common symbol #3 = '0-0088'
+Common symbol #4 = '0-0084'
+Random symbol #0 = '4-0354'
+Random symbol #1 = '0-0035'
+Random symbol #2 = '1-0009'
+Random symbol #3 = '4-1022'
+Random symbol #4 = '1-0126'
+Random symbol #5 = '4-0493'
+Random symbol #6 = '0-0031'
+Random symbol #7 = '0-0014'
+Random symbol #8 = '3-0074'
+Random symbol #9 = '4-0166'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 915
+Symbol = '0-0020', # of records = 913
+Symbol = '0-0033', # of records = 867
+Symbol = '0-0088', # of records = 894
+Symbol = '0-0084', # of records = 877
+Checking random symbols
+Symbol = '4-0354', # of records = 17
+Symbol = '0-0035', # of records = 912
+Symbol = '1-0009', # of records = 246
+Symbol = '4-1022', # of records = 15
+Symbol = '1-0126', # of records = 202
+Symbol = '4-0493', # of records = 12
+Symbol = '0-0031', # of records = 926
+Symbol = '0-0014', # of records = 873
+Symbol = '3-0074', # of records = 18
+Symbol = '4-0166', # of records = 20
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 860
+Symbol = '0-0018', # of records = 927
+Symbol = '0-0052', # of records = 979
+Opening file: swmr_data.h5
+Symbol = '0-0037', # of records = 811
+Symbol = '0-0081', # of records = 901
+Checking random symbols
+Symbol = '0-0080', # of records = 928
+Symbol = '2-0321', # of records = 71
+Symbol = '0-0075', # of records = 1031
+Symbol = '1-0104', # of records = 275
+Symbol = '3-0007', # of records = 9
+Symbol = '1-0019', # of records = 239
+Symbol = '0-0069', # of records = 861
+Symbol = '1-0046', # of records = 113
+Symbol = '1-0138', # of records = 235
+Symbol = '0-0007', # of records = 861
+Closing file
+Checking common symbols
+Symbol = '0-0024', # of records = 1071
+Symbol = '0-0025', # of records = 922
+Symbol = '0-0069', # of records = 861
+Symbol = '0-0032', # of records = 947
+Symbol = '0-0078', # of records = 994
+Checking random symbols
+Symbol = '4-0836', # of records = 11
+Symbol = '2-0204', # of records = 49
+Symbol = '0-0030', # of records = 947
+Symbol = '1-0186', # of records = 198
+Symbol = '3-0010', # of records = 26
+Symbol = '0-0079', # of records = 998
+Symbol = '2-0139', # of records = 78
+Symbol = '4-0820', # of records = 6
+Symbol = '0-0078', # of records = 994
+Symbol = '3-0123', # of records = 49
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 1038
+Symbol = '0-0032', # of records = 937
+Symbol = '0-0095', # of records = 832
+Symbol = '0-0058', # of records = 815
+Symbol = '0-0016', # of records = 842
+Checking random symbols
+Symbol = '3-0635', # of records = 24
+Symbol = '0-0090', # of records = 1013
+Symbol = '0-0038', # of records = 1019
+Symbol = '1-0001', # of records = 153
+Symbol = '2-0228', # of records = 89
+Symbol = '2-0285', # of records = 54
+Symbol = '1-0011', # of records = 345
+Symbol = '3-0688', # of records = 12
+Symbol = '2-0006', # of records = 70
+Symbol = '4-1552', # of records = 19
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0000', # of records = 929
+Symbol = '0-0076', # of records = 952
+Symbol = '0-0088', # of records = 881
+Symbol = '0-0028', # of records = 1050
+Symbol = '0-0085', # of records = 865
+Checking random symbols
+Symbol = '0-0048', # of records = 1048
+Symbol = '1-0171', # of records = 261
+Symbol = '0-0078', # of records = 1009
+Symbol = '0-0068', # of records = 630
+Symbol = '0-0018', # of records = 912
+Symbol = '0-0069', # of records = 862
+Symbol = '0-0012', # of records = 933
+Symbol = '0-0072', # of records = 956
+Symbol = '4-1541', # of records = 11
+Symbol = '2-0389', # of records = 59
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 867
+Symbol = '0-0020', # of records = 794
+Symbol = '0-0033', # of records = 703
+Symbol = '0-0088', # of records = 881
+Symbol = '0-0084', # of records = 864
+Checking random symbols
+Symbol = '4-0354', # of records = 21
+Symbol = '0-0035', # of records = 862
+Symbol = '1-0009', # of records = 259
+Symbol = '4-1022', # of records = 3
+Symbol = '1-0126', # of records = 251
+Symbol = '4-0493', # of records = 22
+Symbol = '0-0031', # of records = 1002
+Symbol = '0-0014', # of records = 779
+Symbol = '3-0074', # of records = 37
+Symbol = '4-0166', # of records = 1
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0024', # of records = 1266
+Symbol = '0-0025', # of records = 761
+Symbol = '0-0069', # of records = 794
+Symbol = '0-0032', # of records = 932
+Symbol = '0-0078', # of records = 928
+Checking random symbols
+Symbol = '4-0836', # of records = 12
+Symbol = '2-0204', # of records = 27
+Symbol = '0-0030', # of records = 983
+Symbol = '1-0186', # of records = 269
+Symbol = '3-0010', # of records = 42
+Symbol = '0-0079', # of records = 948
+Symbol = '2-0139', # of records = 142
+Symbol = '4-0820', # of records = 0
+Symbol = '0-0078', # of records = 928
+Symbol = '3-0123', # of recOpening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 917
+Symbol = '0-0018', # of records = 875
+Symbol = '0-0052', # of records = 1037
+Symbol = '0-0037', # of records = 842
+Symbol = '0-0081', # of records = 848
+Checking random symbols
+Symbol = '0-0080', # of records = 1093
+Symbol = '2-0321', # of records = 61
+Symbol = '0-0075', # of records = 982
+Symbol = '1-0104', # of records = 255
+Symbol = '3-0007', # of records = 30
+Symbol = '1-0019', # of records = 227
+Symbol = '0-0069', # of records = 794
+Symbol = '1-0046', # of records = 126
+Symbol = '1-0138', # of records = 308
+Symbol = '0-0007', # of records = 837
+Closing file
+ords = 58
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0000', # of records = 909
+Symbol = '0-0076', # of records = 1132
+Symbol = '0-0088', # of records = 1072
+Symbol = '0-0028', # of records = 1082
+Symbol = '0-0085', # of records = 898
+Checking random symbols
+Symbol = '0-0048', # of records = 963
+Symbol = '1-0171', # of records = 260
+Symbol = '0-0078', # of records = 928
+Symbol = '0-0068', # of records = 554
+Symbol = '0-0018', # of records = 875
+Symbol = '0-0069', # of records = 794
+Symbol = '0-0012', # of records = 916
+Symbol = '0-0072', # of records = 889
+Symbol = '4-1541', # of records = 10
+Symbol = '2-0389', # of records Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 917
+Symbol = '0-0020', # of records = 814
+Symbol = '0-0033', # of records = 837
+Symbol = '0-0088', # of records = 1072
+Symbol = '0-0084', # of records = 819
+Checking random symbols
+Symbol = '4-0354', # of records = 12
+Symbol = '0-0035', # of records = 822
+Symbol = '1-0009', # of records = 275
+Symbol = '4-1022', # of records = 10
+Symbol = '1-0126', # of records = 208
+Symbol = '4-0493', # of records = 17
+Symbol = '0-0031', # of records = 801
+Symbol = '0-0014', # of records = 775
+Symbol = '3-0074', # of records = 31
+Symbol = '4-0166', # of records = 0
+Closing file
+= 70
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 994
+Symbol = '0-0032', # of records = 932
+Symbol = '0-0095', # of records = 829
+Symbol = '0-0058', # of records = 640
+Symbol = '0-0016', # of records = 861
+Checking random symbols
+Symbol = '3-0635', # of records = 15
+Symbol = '0-0090', # of records = 999
+Symbol = '0-0038', # of records = 1179
+Symbol = '1-0001', # of records = 151
+Symbol = '2-0228', # of records = 82
+Symbol = '2-0285', # of records = 83
+Symbol = '1-0011', # of records = 309
+Symbol = '3-0688', # of records = 19
+Symbol = '2-0006', # of records = 66
+Symbol = '4-1552', # of records = 22
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 810
+Symbol = '0-0018', # of records = 920
+Symbol = '0-0052', # of records = 970
+Symbol = '0-0037', # of records = 802
+Symbol = '0-0081', # of records = 915
+Checking random symbols
+Symbol = '0-0080', # of records = 985
+Symbol = '2-0321', # of records = 46
+Symbol = '0-0075', # of records = 948
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '1-0104', # of records = 105
+Symbol = '3-0007', # of records = 39
+Symbol = '1-0019', # of records = 187
+Symbol = '0-0069', # of records = 924
+Symbol = '1-0046', # of records = 205
+Symbol = '1-0138', # of records = 351
+Symbol = '0-0007', # of records = 1020
+Closing file
+Symbol = '0-0024', # of records = 1330
+Symbol = '0-0025', # of records = 665
+Symbol = '0-0069', # of records = 924
+Symbol = '0-0032', # of records = 1026
+Symbol = '0-0078', # of records = 976
+Checking random symbols
+Symbol = '4-0836', # of records = 10
+Symbol = '2-0204', # of records = 33
+Symbol = '0-0030', # of records = 953
+Symbol = '1-0186', # of records = 234
+Symbol = '3-0010', # of records = 26
+Symbol = '0-0079', # of records = 1030
+Symbol = '2-0139', # of records = 129
+Symbol = '4-0820', # of records = 0
+Symbol = '0-0078', # of records = 976
+Symbol = '3-0123', # of records = 23
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 810
+Symbol = '0-0020', # of records = 931
+Opening file: swmr_data.h5
+Symbol = '0-0033', # of records = 791
+Symbol = '0-0088', # of records = 1143
+Symbol = '0-0084', # of records = 669
+Checking common symbols
+Checking random symbols
+Symbol = '4-0354', # of records = 20
+Symbol = '0-0000', # of records = 868
+Symbol = '0-0035', # of records = 830
+Symbol = '0-0076', # of records = 1196
+Symbol = '1-0009', # of records = 309
+Symbol = '0-0088', # of records = 1143
+Symbol = '4-1022', # of records = 47
+Symbol = '0-0028', # of records = 1275
+Symbol = '1-0126', # of records = 278
+Symbol = '0-0085', # of records = 890
+Symbol = '4-0493', # of records = 18
+Checking random symbols
+Symbol = '0-0031', # of records = 831
+Symbol = '0-0048', # of records = 867
+Symbol = '0-0014', # of records = 842
+Symbol = '1-0171', # of records = 307
+Symbol = '3-0074', # of records = 51
+Symbol = '0-0078', # of records = 976
+Symbol = '4-0166', # of records = 8
+Closing file
+Symbol = '0-0068', # of records = 647
+Symbol = '0-0018', # of records = 920
+Symbol = '0-0069', # of records = 924
+Symbol = '0-0012', # of records = 733
+Symbol = '0-0072', # of records = 1018
+Symbol = '4-1541', # of records = 22
+Symbol = '2-0389', # of records = 68
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 947
+Symbol = '0-0032', # of records = 1017
+Symbol = '0-0095', # of records = 677
+Symbol = '0-0058', # of records = 751
+Symbol = '0-0016', # of records = 889
+Checking random symbols
+Symbol = '3-0635', # of records = 0
+Symbol = '0-0090', # of records = 904
+Symbol = '0-0038', # of records = 1125
+Symbol = '1-0001', # of records = 83
+Symbol = '2-0228', # of records = 90
+Symbol = '2-0285', # of records = 57
+Symbol = '1-0011', # of records = 313
+Symbol = '3-0688', # of records = 7
+Symbol = '2-0006', # of records = 78
+Symbol = '4-1552', # of records = 40
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0052', # of records = 1018
+Symbol = '0-0037', # of records = 787
+Symbol = '0-0081', # of records = 919
+Checking random symbols
+Symbol = '0-0080', # of records = 1046
+Symbol = '2-0321', # of records = 60
+OpenSymboil = '0-0075', # of recornds = 978
+g filSymboel = '1-0104', # of records =: 146
+ swmr_data.h5
+Symbol = '3-0007', # of records = 48
+Symbol = '1-0019', # of records = 193
+Checking common symbols
+Symbol = '0-0069', # of records = 875
+SymbSymbool = '1-0046', # of recolrds = 210
+Symbol = '1-0138', # of rec = '0-0024', # of records = 1330
+ords = 375
+SymboSymbol = '0-0025', l = '0-0007', # # of recoof recorrds = 608ds = 1040
+
+Closing file
+Symbol = '0-0069', # of records = 875
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0078', # of records = 899
+Checking random symbols
+Symbol = '4-0836', # of records = 13
+Symbol = '2-0204', # of records = 30
+Symbol = '0-0030', # of records = 912
+Symbol = '1-0186', # of records = 241
+Symbol = '3-0010', # of records = 52
+Symbol = '0-0079', # of records = 1011
+Symbol = '2-0139', # of records = 150
+Symbol = '4-0820', # of records = 0
+Symbol = '0-0078', # of records = 899
+Symbol = '3-0123', # of records = 14
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0020', # of records = 911
+Opening file: swmr_data.h5
+Symbol = '0-0033', # of records = 791
+Symbol = '0-0088', # of records = 1164
+Checking common symbols
+Symbol = '0-0084', # of records = 591
+CheckingSymbol = ' random symbols
+0-0000', # of records = 914
+Symbol = '4-0354', # of records = 16
+Symbol = '0-0076', # of records = 1229
+Symbol = '0-0035', # of records = 875
+Symbol = '0-0088', # of records = 1164
+Symbol = '1-0009', # of records = 271
+Symbol = '0-0028', # of records = 1237
+Symbol = '4-1022', # of records = 43
+Symbol = '0-0085', # of records = 922
+Checking rSymandombol = ' symbol1-0126', # s
+of records = 277
+Symbol = '0-0048', # of records = 898
+Symbol = '4-0493', # of records = 14
+Symbol = '1-0171', # of records = 287
+Symbol = '0-0031', # of records = 849
+Symbol = '0-0078', # of records = 899
+Symbol = '0-0014', # of records = 933
+Symbol = '0-0068', # of records = 533
+Symbol = '3-0074', # of records = 49
+Symbol = '0-0018', # of records = 897
+Symbol = '4-0166', # of records = 8
+Symbol = '0-0069', # of records = 875
+Closing file
+Symbol = '0-0012', # of records = 772
+Symbol = '0-0072', # of records = 1075
+Symbol = '4-1541', # of records = 24
+Symbol = '2-0389', # of records = 62
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 978
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0095', # of records = 626
+Symbol = '0-0058', # of records = 761
+Symbol = '0-0016', # of records = 892
+Checking random symbols
+Symbol = '3-0635', # of records = 0
+Symbol = '0-0090', # of records = 877
+Symbol = '0-0038', # of records = 1077
+Symbol = '1-0001', # of records = 61
+Symbol = '2-0228', # of records = 64
+Symbol = '2-0285', # of records = 49
+Symbol = '1-0011', # of records = 342
+Symbol = '3-0688', # of records = 17
+Symbol = '2-0006', # of records = 82
+Symbol = '4-1552', # of records = 40
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0052', # of records = 1018
+Symbol = '0-0037', # of recOpeningords = 787
+ file: swmr_data.h5
+Symbol = '0-0081', # of records = 919
+CheckCheckining random sg common symbymbols
+ols
+Symbol = '0-0080', # of records = 1046
+Symbol = '0-0024', # of records = 1330
+Symbol = '2-0321', # of records = 60
+Symbol = '0-0025', # oSymbof recorl = '0-0075', #ds = 608
+ of records = 978
+SymboSymbl = '0-0069', #ol = '1-0104', of records  # of re= 875
+cords = 146
+SymboSymbl = '0-0032', # ol = '3-0007', # of recof records = 921
+ords = 48
+SymboSymbol = '0-0078', #l = '1-0019', #  of recoof recorrds = 899ds = 193
+
+Checking random symbols
+Symbol = '0-0069', # of records = 875
+Symbol = '4-0836', # of records = 13
+Symbol = '1-0046', # of records = 210
+Symbol = '2-0204', # of records = 30
+Symbol = '1-0138', # of records = 375
+Symbol = '0-0030', # of records = 912
+Symbol = '0-0007', # of records = 1040
+Symbol = '1-0186', # of records = Closi241
+ng file
+Symbol = '3-0010', # of records = 52
+Symbol = '0-0079', # of records = 1011
+Symbol = '2-0139', # of records = 150
+Symbol = '4-0820', # of records = 0
+Symbol = '0-0078', # of records = 899
+Symbol = '3-0123', # of records = 14
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0020', # of records = 911
+Symbol = '0-0033', # of records = 791
+Symbol = '0-0088', # of records = 1164
+Symbol = '0-0084', # of records = 591
+Checking random symbols
+Symbol = '4-0354', # of records = 16
+Symbol = '0-0035', # of records = 875
+Opening file: swmr_data.h5
+Symbol = '1-0009', # of records = 271
+Symbol = '4-1022', # of records = 43
+Checking common symbols
+Symbol = '1-0126', # of records = 277
+Symbol = '0-0000', # of records = 914
+Symbol = '4-0493', # of records = 14
+Symbol = '0-0076', # of records = 1229
+Symbol = '0-0031', # of records = 849
+Symbol = '0-0088', # of recoSymrds = 1164bol = '
+0-0014', # of records = 933
+Symbol = '0-0028', # of records = Symbo1237
+l = '3-0074', # of records = 49
+Symbol = '0-0085', Symb# of ol = 'records4-0166',  = 922# of re
+cords = 8
+Closing file
+Checking random symbols
+Symbol = '0-0048', # of records = 898
+Symbol = '1-0171', # of records = 287
+Symbol = '0-0078', # of records = 899
+Symbol = '0-0068', # of records = 533
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0069', # of records = 875
+Symbol = '0-0012', # of records = 772
+Symbol = '0-0072', # of records = 1075
+Symbol = '4-1541', # of records = 24
+Symbol = '2-0389', # of records = 62
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 978
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0095', # of records = 626
+Symbol = '0-0058', # of records = 761
+Symbol = '0-0016', # of records = 892
+Checking random symbols
+Symbol = '3-0635', # of records = 0
+Symbol = '0-0090', # of records = 877
+Symbol = '0-0038', # of records = 1077
+Symbol = '1-0001', # of records = 61
+Symbol = '2-0228', # of records = 64
+Symbol = '2-0285', # of records = 49
+Symbol = '1-0011', # of records = 342
+Symbol = '3-0688', # of records = 17
+Symbol = '2-0006', # of records = 82
+Symbol = '4-1552', # of records = 40
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0052', # of records = 1018
+Symbol = '0-0037', # of records = 787
+Symbol = '0-0081', # of records = 919
+Checking random symbols
+Symbol = '0-0080', # of records = 1046
+Symbol = '2-0321', # of records = 60
+Symbol = '0-0075', # of records = 978
+Symbol = '1-0104', # of records = 146
+Symbol = '3-0007', # of records = 48
+Symbol = '1-0019', # of records = 193
+Symbol = '0-0069', # of records = 875
+Symbol = '1-0046', # of records = 210
+Opening file: swmr_data.h5
+Symbol = '1-0138', # of records = 375
+Symbol = '0-0007', # of records = 1040
+Checking common symbols
+Closing file
+Symbol = '0-0024', # of records = 1330
+Symbol = '0-0025', # of records = 608
+Symbol = '0-0069', # of records = 875
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0078', # of records = 899
+Checking random symbols
+Symbol = '4-0836', # of records = 13
+Symbol = '2-0204', # of records = 30
+Symbol = '0-0030', # of records = 912
+Symbol = '1-0186', # of records = 241
+Symbol = '3-0010', # of records = 52
+Symbol = '0-0079', # of records = 1011
+Symbol = '2-0139', # of records = 150
+Symbol = '4-0820', # of records = 0
+Symbol = '0-0078', # of records = 899
+Symbol = '3-0123', # of records = 14
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0020', # of records = 911
+Symbol = '0-0033', # of records = 791
+Opening file: swmr_data.h5
+Symbol = '0-0088', # of records = 1164
+Symbol = '0-0084', # of records = 591
+Checking common symbols
+Checking random symbols
+Symbol = '4-0354', # of records = 16
+Symbol = '0-0000', # of records = 914
+Symbol = '0-0035', # of records = 875
+Symbol = '0-0076', # of records = 1229
+Symbol = '1-0009', # of records = 271
+Symbol = '0-0088', # of records = 1164
+Symbol = '4-1022', # of records = 43
+Symbol = '0-0028', # of rSymboecords =l = '1-0126', # 1237
+ of records = 277
+Symbol = '0-0085', # of records = 922
+Symbol = '4-0493', # of records = 14
+Checking random symbols
+Symbol = '0-0048', # ofSymb recordsol = '0-0031' = 898
+, # of records = 849
+Symbol = '1-0171', # Symbof recorol = '0-0014', #ds = 287 of rec
+ords = 933
+Symbol = '0-0078', # of records = 899
+SySymbol = '3-0074', # of records = 49
+Symbol = '4-0166', # of records m= 8
+bol = '0-0068', # of records = 533
+Closing file
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0069', # of records = 875
+Symbol = '0-0012', # of records = 772
+Symbol = '0-0072', # of records = 1075
+Symbol = '4-1541', # of records = 24
+Symbol = '2-0389', # of records = 62
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 978
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0095', # of records = 626
+Symbol = '0-0058', # of records = 761
+Symbol = '0-0016', # of records = 892
+Checking random symbols
+Symbol = '3-0635', # of records = 0
+Symbol = '0-0090', # of records = 877
+Symbol = '0-0038', # of records = 1077
+Symbol = '1-0001', # of records = 61
+Symbol = '2-0228', # of records = 64
+Symbol = '2-0285', # of records = 49
+Symbol = '1-0011', # of records = 342
+Symbol = '3-0688', # of records = 17
+Symbol = '2-0006', # of records = 82
+Symbol = '4-1552', # of records = 40
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0052', # of records = 1018
+Symbol = '0-0037', # of records = 787
+Symbol = '0-0081', # of records = 919
+Checking random symbols
+Symbol = '0-0080', # of records = 1046
+Symbol = '2-0321', # of records = 60
+Symbol = '0-0075', # of records = 978
+Symbol = '1-0104', # of records = 146
+Symbol = '3-0007', # of records = 48
+Symbol = '1-0019', # of records = 193
+Symbol = '0-0069', # of records = 875
+Symbol = '1-0046', # of records = 210
+Symbol = '1-0138', # of records = 375
+Symbol = '0-0007', # of records = 1040
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0024', # of records = 1330
+Symbol = '0-0025', # of records = 608
+Symbol = '0-0069', # of records = 875
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0078', # of records = 899
+Checking random symbols
+Symbol = '4-0836', # of records = 13
+Symbol = '2-0204', # of records = 30
+Symbol = '0-0030', # of records = 912
+Symbol = '1-0186', # of records = 241
+Symbol = '3-0010', # of records = 52
+Symbol = '0-0079', # of records = 1011
+Symbol = '2-0139', # of records = 150
+Symbol = '4-0820', # of records = 0
+Symbol = '0-0078', # of records = 899
+Symbol = '3-0123', # of records = 14
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0049', # of records = 763
+Symbol = '0-0020', # of records = 911
+Symbol = '0-0033', # of records = 791
+Symbol = '0-0088', # of records = 1164
+Symbol = '0-0084', # of records = 591
+Checking random symbols
+Symbol = '4-0354', # of records = 16
+Symbol = '0-0035', # of records = 875
+Opening file: swmr_data.h5
+Symbol = '1-0009', # of records = 271
+Symbol = '4-1022', # of records = 43
+Checking common symbols
+Symbol = '1-0126', # of records = 277
+Symbol = '0-0000', # of records =Symb 914
+ol = '4-0493', # of records = 14
+Symbol = '0-0031'Symbo, # of l = '0-0076', # orecords f record= 849
+s = 1229
+Symbol = '0-0014', # of records Symbo= 933
+l = '0-0088', # of records = 1164
+Symbol = '3-0074', # of records = 49
+Symbol = '0-0028', # of records = 1237
+Symbol = '4-0166', # of records = 8
+Symbol = '0-0085', # of rCloecords sing file
+= 922
+Checking random symbols
+Symbol = '0-0048', # of records = 898
+Symbol = '1-0171', # of records = 287
+Symbol = '0-0078', # of records = 899
+Symbol = '0-0068', # of records = 533
+Symbol = '0-0018', # of records = 897
+Symbol = '0-0069', # of records = 875
+Symbol = '0-0012', # of records = 772
+Symbol = '0-0072', # of records = 1075
+Symbol = '4-1541', # of records = 24
+Symbol = '2-0389', # of records = 62
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 978
+Symbol = '0-0032', # of records = 921
+Symbol = '0-0095', # of records = 626
+Symbol = '0-0058', # of records = 761
+Symbol = '0-0016', # of records = 892
+Checking random symbols
+Symbol = '3-0635', # of records = 0
+Symbol = '0-0090', # of records = 877
+Symbol = '0-0038', # of records = 1077
+Symbol = '1-0001', # of records = 61
+Symbol = '2-0228', # of records = 64
+Symbol = '2-0285', # of records = 49
+Symbol = '1-0011', # of records = 342
+Symbol = '3-0688', # of records = 17
+Symbol = '2-0006', # of records = 82
+Symbol = '4-1552', # of records = 40
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Sparse writer test - test writing to random locations in the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = 5
+	index type = ea
+Using generator random seed (used in sparse test only): 166303
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_sparse_writer
+Parameters:
+	# of records between flushes = 1000
+	# of records to write = 20000
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding records
+SWMR_WRITER_MESSAGE is found
+launch 3 swmr_sparse_readers
+Closing datasets
+Releasing symbols
+Closing objects
+
+*******************************************************************************
+** Loop testing parameters: -i b2 
+*******************************************************************************
+
+
+###############################################################################
+## Generator test
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = -1
+	index type = b2
+Using generator random seed (used in sparse test only): 319952
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_generator with SWMR_WRITE
+Parameters:
+	swmr writes on
+	compression level = -1
+	index type = b2
+Using generator random seed (used in sparse test only): 510650
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+
+###############################################################################
+## Use H5Fstart_swmr_write() to enable SWMR writing mode
+###############################################################################
+launch the swmr_start_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 698551
+Using reader random seed: 71824
+Using reader random seed: 78676
+Using reader random seed: 88070
+Using reader random seed: 88634
+Using reader random seed: 93714
+
+###############################################################################
+## Writer test - test expanding the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes on
+	compression level = -1
+	index type = b2
+Using generator random seed (used in sparse test only): 124992
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 304786
+Using reader random seed: 453500
+Using reader random seed: 465523
+Using reader random seed: 468654
+Using reader random seed: 472507
+Using reader random seed: 483291
+
+###############################################################################
+## Remove test - test shrinking the dataset
+###############################################################################
+launch the swmr_remove_writer
+Parameters:
+	# of shrinks between flushes = 1000
+	# of shrinks = 40000
+Using writer random seed: 516427
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 691890
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0047'
+Common symbol #1 = '0-0022'
+Common symbol #2 = '0-0080'
+Common symbol #3 = '0-0049'
+Common symbol #4 = '0-0006'
+Random symbol #0 = '0-0074'
+Random symbol #1 = '4-1191'
+Random symbol #2 = '4-1161'
+Random symbol #3 =P '0-0091'
+Random symbol #4 = '1-0054'
+RanParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 701696
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0014'
+Common symbol #1 = '0-0060'
+Common symbol #2 = '0-0000'
+Common symbol #3 = '0-0065'
+Common symbol #4 = '0-0079'
+Random symbol #0 = '0-0023'
+Random symbol #1 = '1-0129'
+Random symbol #2 = '0-0087'
+Random symbol #3 = '3-0445'
+Random symbol #4 = '2-0315'
+Random symbol #5 = '1-0164'
+Random symbol #6 = '0-0083'
+Random symbol #7 = '2-0378'
+Random symbol #8 = '0-0036'
+Random symbol #9 = '0-0083'
+Reading records
+Opening file: swmr_data.h5
+dom symbol #5 = '1-0171'
+Random symbol #6 = '1-0198'
+Random symbol #7 = '0-0000'
+Random symbol #8 = '3-0702'
+Random symbol #9 = '4-1409'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0047', # of records = 910
+Symbol = '0-0022', # of records = 901
+Symbol = '0-0080', # of records = 861
+Symbol = '0-0049', # of records = 922
+Symbol = '0-0006', # of records = 912
+Checking random symbols
+Symbol = '0-0074', # of records = 809
+Symbol = '4-1191', # of records = 10
+Symbol = '4-1161', # of records = 7
+Symbol = '0-0091', # of records = 905
+Symbol = '1-0054', # of records = 205
+Symbol = '1-0171', # of records = 209
+Symbol = '1-0198', # of records = 210
+Symbol = '0-0000', # of records = 911
+Symbol = '3-0702', # of records = 41
+Symbol = '4-1409', # of reCchoercdksi n=g  14c
+ommonC lsoysmibnogl sf
+ile
+Symbol = '0-0014', # of records = 918
+Symbol = '0-0060', # of records = 877
+Symbol = '0-0000', # of records = 911
+Symbol = '0-0065', # of records = 835
+Symbol = '0-0079', # of records = 907
+Checking random symbols
+Symbol = '0-0023', # of records = 864
+Symbol = '1-0129', # of records = 229
+Symbol = '0-0087', # of records = 820
+Symbol = '3-0445', # of records = 27
+Symbol = '2-0315', # of records = 55
+Symbol = '1-0164', # of records = 214
+Symbol = '0-0083', # of records = 860
+Symbol = '2-0378', # of records = 53
+Symbol = '0-0036', # of records = 898
+Symbol = '0-0083', # of records = 860
+Closing file
+arameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 701882
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0057'
+Common symbol #1 = '0-0040'
+Common symbol #2 = '0-0063'
+Common symbol #3 = '0-0050'
+Common symbol #4 = '0-0066'
+Random symbol #0 = '2-0102'
+Random symbol #1 = '0-0078'
+Random symbol #2 = '0-0018'
+Random symbol #3 = '1-0120'
+Random symbol #4 = '3-0128'
+Random symbol #5 = '0-0090'
+Random symbol #6 = '0-0032'
+Random symbol #7 = '3-0678'
+Random symbol #8 = '0-0085'
+Random symbol #9 = '2-0018'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0057', # of records = 887
+Symbol = '0-0040', # of records = 902
+Symbol = '0-0063', # of records = 887
+Symbol = '0-0050', # of records = 931
+Symbol = '0-0066', # of records = 882
+Checking random symbols
+Symbol = '2-0102', # of records = 68
+Symbol = '0-0078', # of records = 813
+Symbol = '0-0018', # of records = 870
+Symbol = '1-0120', # of records = 220
+Symbol = '3-0128', # of records = 22
+Symbol = '0-0090', # of records = 855
+Symbol = '0-0032', # of records = 842
+Symbol = '3-0678', # of records = 24
+Symbol = '0-0085', # of records = 908
+Symbol = '2-0018', # of records = 66
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 710646
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0005'
+Common symbol #1 = '0-0099'
+Common symbol #2 = '0-0079'
+Common symbol #3 = '0-0008'
+Common symbol #4 = '0-0043'
+Random symbol #0 = '0-0024'
+Random symbol #1 = '0-0053'
+Random symbol #2 = '0-0019'
+Random symbol #3 = '0-0009'
+Random symbol #4 = '0-0079'
+Random symbol #5 = '0-0059'
+Random symbol #6 = '0-0059'
+Random symbol #7 = '1-0176'
+Random symbol #8 = '4-1473'
+Random symbol #9 = '0-0055'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0005', # of records = 857
+Symbol = '0-0099', # of records = 918
+Symbol = '0-0079', # of records = 907
+Symbol = '0-0008', # of recorParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 714433
+Generating symbol names
+ds = 875
+Symbol = '0-0043', # of reCcohrodos sing datasets
+=C om931mon symbol #0 = '0-0008'
+Common symbol #1 = '0-0073'
+Common symbol #2 = '0-0095'
+Common symbol #3 = '0-0038'
+Common symbol #4 = '0-0002'
+Random symbol #0 = '0-0051'
+Random symbol #1 = '1-0099'
+Random symbol #2 = '0-0051'
+Random symbol #3 = '2-0251'
+Random symbol #4 = '0-0043'
+Random symbol #5 = '1-0182'
+Random symbol #6 = '0-0030'
+Random symbol #7 = '1-0078'
+Random symbol #8 = '0-0033'
+Random symbol #9 = '1-0043'
+Reading records
+Opening file: swmr_data.h5
+
+Checking common symbols
+Symbol = '0-0008', # of records = 875
+Checking random symbols
+Symbol = '0-0024', # of records = 905
+Symbol = '0-0073', # of records = 846
+Symbol = '0-0053', # of records = 895
+Symbol = '0-0095', # of records = 866
+Symbol = '0-0019', # of records = 887
+Symbol = '0-0038', # of records = 872
+Symbol = '0-0009', # of records = 872
+Symbol = '0-0002', # of records = 842
+Symbol = '0-0079', # of records = 907
+Checking random symbols
+Symbol = '0-0059', # of records =S 828
+ymbol = '0-0051', # of records = 825
+Symbol = '0-0059', # of records = 828
+Symbol = '1-0099', # of records = 230
+Symbol = '1-0176', # of records = 215
+Symbol = '0-0051', # of records = 825
+SSymbol = '2-0251', # of records = 53
+ymbol = '4-1473', # of records = 13
+Symbol = '0-0043', # of records = 931
+Symbol = '0-0055', # of records = 851
+Closing file
+Symbol = '1-0182', # of records = 194
+Symbol = '0-0030', # of records = 885
+Symbol = '1-0078', # of records = 185
+Symbol = '0-0033', # of records = 845
+Symbol = '1-0043', # of records = 211
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0022', # of records = 0
+Symbol = '0-0080', # of records = 14
+Symbol = '0-0049', # of records = 0
+Symbol = '0-0006', # of records = 0
+Checking random symbols
+Symbol = '0-0074', # of recorOpening file: swmr_data.h5
+ds = 0
+Symbol = '4-1191', # of records = Checki8ng common symbols
+
+SSymbol = '0-0014', y# of records =m 0
+bol = 'Symbol = '0-0060', #4-1161 of records = '0
+, # Symbool = '0-0000', # of recfords = 0
+ recoSymbol = '0-0065',r # of recordsd = 0
+s = Symbol = '0-0079', # of r0ecords = 0
+
+Checking random symbols
+SSymbol = '0-0023', # ofy records = 0
+mbol Symb=ol = '1-0129', # of recor ds = 38
+'0-0091', # Symbol = '0-0087'o, # of recordfs = 0
+ recoSymbrol = '3-0445', # of rdecords = 0
+s = 0Symbol = '2-0315'
+, # of records = 33
+SSymbol = '1-0164y', # of recormds = 0
+boOpening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0057', # of records = 0
+Symbol = '0-0040', # of records = 0
+Symbol = '0-0063', # of records = 0
+Symbol = '0-0050', # of records = 0
+Symbol = '0-0066', # of records = 0
+Checking random symbols
+Symbol = '2-0102', # of records = 37
+Symbol = '0-0078', # of records = 0
+Symbol = '0-0018', # of records = 0
+Symbol = '1-0120', # of records = 20
+Symbol = '3-0128', # of records = 0
+Symbol = '0-0090', # of records = 0
+Symbol = '0-0032', # of records = 0
+Symbol = '3-0678', # of records = 0
+Symbol = '0-0085', # of records = 0
+Symbol = '2-0018', # of records = 15
+Closing file
+l =Symbol =  '0-0083', # of records =' 1
+1-0054', #Symbol  = '2-0378', # of recoords = 0
+f recSymbol = '0-0036', # of orecords = 0
+rds Symbol = '0-0083', # o=f records =  1
+14
+Closing file
+Symbol = '1-0171', # of records = 0
+Symbol = '1-0198', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '3-0702', # of records = 0
+Symbol = '4-1409', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Opening file: swmr_data.h5
+Symbol = '0-0005', # of records = 30
+Symbol = '0-0099', # of records = 54
+Symbol = '0-0079', # of records = 0
+Symbol = '0-0008', # of records = 0
+Symbol = '0-0043', # of records = 0
+Checking random symbols
+Symbol = '0-0024', # ofCheck records = ing common 0
+symbols
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0008', # of records = 0
+Symbol = '0-0019', # of records = 0
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0073', # of records = 0
+Symbol = '0-0079', # of records = 0
+Symbol = '0-0059', # of records = 0
+Symbol = '0-0095', # of records = 36
+Symbol = '0-0059', # of records = 0
+Symbol =S 'ym1-0176b',o l#  =o f' 0-0038r'e,c o#r dosf  =r ec0o
+rds = 0
+SSyymmbbooll  ==  ''0-00024-1473'',,  ##  ooff  rreeccoorrds d=s  0=
+ 0
+ChSyeckinmg random symbols
+bol = '0-0055', # of records = 0
+Closing file
+Symbol = '0-0051', # of records = 0
+Symbol = '1-0099', # of records = 25
+Symbol = '0-0051', # of records = 0
+Symbol = '2-0251', # of records = 0
+Symbol = '0-0043', # of records = 0
+Symbol = '1-0182', # of records = 0
+Symbol = '0-0030', # of records = 0
+Symbol = '1-0078', # of records = 0
+Symbol = '0-0033', # of records = 0
+Symbol = '1-0043', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0057', # of records = 0
+Opening file: swmr_data.h5
+Symbol = '0-0040', # of records = 0
+Symbol = '0-0063', # of records = 0
+SymboCheckil = '0-0050', # ng common symbolof recors
+ds = 0
+Symbol = '0-0066', # of records = 0
+Checking random symbols
+Symbol = '0-0014', # of records = 0
+Symbol = '2-0102', # of records = 37
+Symbol = '0-0060', # of records = 0
+Symbol = '0-0078', # of records = 0
+Symbol = '0-0018', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0065', # of records = 0
+Symbol = '0-0079', # of records = 0
+Checking random symbolSymbos
+l = '1-0120', # of records = 20
+Symbol = '0-0023', # of records = 0
+Symbol = '3-0128', # of records = 0
+Symbol = '0-0090', # of records = 0
+Symbol = '0-0032', # of records = 0
+Symbol = '3-0678', # of records = 0
+Symbol = '0-0085', # of records = 0
+Symbol = '2-0018', # of records = 15
+Closing file
+Symbol = '1-0129', # of records = 38
+Symbol = '0-0087', # of records = 0
+Symbol = '3-0445', # of records = 0
+Symbol = '2-0315', # of records = 33
+Symbol = '1-0164', # of records = 0
+Symbol = '0-0083', # of records = 1
+Symbol = '2-0378', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0083', # of records = 1
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0022', # of records = 0
+Symbol = '0-0080', # of records = 14
+Symbol = '0-0049', # of records = 0
+Symbol = '0-0006', # of records = 0
+Checking random symbols
+Symbol = '0-0074', # of records = 0
+Symbol = '4-1191', # of records = 8
+Symbol = '4-1161', # of records = 0
+Symbol = '0-0091', # of records = 0
+Symbol = '1-0054', # of records = 14
+Symbol = '1-0171', # of records = 0
+Symbol = '1-0198', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '3-0702', # of records = 0
+Symbol = '4-1409', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0005', # of records = 30
+Symbol = '0-0099', # of records = 54
+Opening file: swmr_data.h5
+Symbol = '0-0079', # of records = 0
+Symbol = '0-0008', # of records = 0
+Symbol = Checkin'0-0043', #g common sy of rembolscords 
+= 0
+Checking random symbols
+Symbol = '0-0024', # of recordSymbs = ol = '0
+0-0008', # of records = 0
+Symbol = '0-0053', # of records = 0
+Symbol = '0-0073', # of records = 0
+Symbol = '0-0019', # of records = 0
+Symbol = '0-0095', # of records = 36
+Symbol = '0-0009', # of records = 0
+Symbol = '0-0079', # of Symrecorbol = 'ds = 0-0038', # 0
+of records = 0
+Symbol = '0-0059Symb', # ol = 'of rec0-0002', ords =# of r 0
+ecords = 0
+Checking random symbols
+Symbol = '0-0059', # of records = 0
+Symbol = '0-0051', # of records = 0
+Symbol = '1-0176', # of records = 0
+Symbol = '1-0099', # of records = 25
+Symbol = '4-1473', # of records = 0
+Symbol = '0-0051', # of records = 0
+Symbol = '0-0055', # of records = 0
+Closing file
+Symbol = '2-0251', # of records = 0
+Symbol = '0-0043', # of records = 0
+Symbol = '1-0182', # of records = 0
+Symbol = '0-0030', # of records = 0
+Symbol = '1-0078', # of records = 0
+Symbol = '0-0033', # of records = 0
+Symbol = '1-0043', # of records = 0
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Add/remove test - randomly grow or shrink the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = -1
+	index type = b2
+Using generator random seed (used in sparse test only): 759349
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+Using writer random seed: 994472
+launch the swmr_addrem_writer
+Parameters:
+	# of operations between flushes = 1000
+	# of operations = 200000
+Using writer random seed: 102016
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding and removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 241772
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0075'
+Common symbol #1 = '0-0050'
+Common symbol #2 = '0-0024'
+Common symbol #3 = '0-0065'
+Common symbol #4 = '0-0077'
+Random symbol #0 = '1-0127'
+Random symbol #1 = '0-0046'
+Random symbol #2 = '0-0039'
+Random symbol #3 = '0-0018'
+Random symbol #4 = '2-0369'
+Random symbol #5 = '0-0087'
+Random symbol #6 = '2-0185'
+Random symbol #7 = '0-0050'
+Random symbol #8 = '2-0276'
+Random symbol #9 = '0-0076'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 914
+Symbol = '0-0050', # of records = 851
+Symbol = '0-0024', # of records = 901
+Symbol = '0-0065', # of records = 878
+Symbol = '0-0077', # of records = 874
+Checking random symbols
+Symbol = '1-0127', # of records = 220
+Symbol = '0-0046', # of records = 880
+Symbol = '0-0039', # of records = 910
+Symbol = '0-0018', # of records = 886
+Symbol = '2-0369', # of records = 56
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 246690
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0026'
+Common symbol #1 = '0-0004'
+Common symbol #2 = '0-0026'
+Common symbol #3 = '0-0057'
+Common symbol #4 = '0-0059'
+Random symbol #0 = '0-0080'
+Random symbol #1 = '4-0552'
+Random symbol #2 = '1-0119'
+Random symbol #3 = '1-0181'
+Random symbol #4 = '2-0341'
+Random symbol #5 = '4-0515'
+Random symbol #6 = '2-0250'
+Random symbol #7 = '1-0144'
+Random symbol #8 = '1-0116'
+Random symbol #9 = '3-0169'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 894
+Symbol = '0-0004', # of records = 901
+Symbol = '0-0026', # of records = 894
+Symbol = '0-0057', # of records = 871
+Symbol = '0-0059', # of records = 890
+Checking random symbols
+Symbol = '0-0080', # of records = 866
+Symbol = '4-0552', # of records = 14
+Symbol = '1-0119', # of records = 221
+Symbol = '1-0181', # of records = 222
+Symbol = '2-0341', # of records = 67
+SSyymmbbooll  ==  ''0-00874-0515'',,  ##  ooff  rerceocrodrsd s=  = 912
+7
+Symbol = '2-0185', # of recoSrymdbso l=  =61 
+'2-0250', # of reScoyrmdbso l=  =50 
+'0-0050', # of rSeycmobrodls  ==  '8511-0144
+', # of reScyomrbdosl  ==  209'
+2-0276', # of Symbol = '1-0116', # of rerecords = 70
+cords S=y m220b
+ol = '0-0076', #S yomfb orle c=o r'd3-0169s' ,=  # 852o
+f recoCrldoss i=n g40 
+file
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 259477
+Generating symbol names
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 257488
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0048'
+Common symbol #1 = '0-0015'
+Common symbol #2 = '0-0060'
+Common symbol #3 = '0-0068'
+Common symbol #4 = '0-0040'
+Random symbol #0 = '0-0034'
+Random symbol #1 = '1-0032'
+Random symbol #2 = '0-0071'
+Random symbol #3 = '0-0021'
+Random symbol #4 = '0-0078'
+Random symbol #5 = '3-0448'
+Random symbol #6 = '0-0071'
+Random symbol #7 = '0-0081'
+Random symbol #8 = '4-1569'
+Random symbol #9 = '0-0092'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0048', # of records = 892
+Symbol = '0-0015', # of records = 847
+Symbol = '0-0060', # of records = 879
+Symbol = '0-0068', # of records = 870
+Symbol = '0-0040', # of records = 896
+Checking random symbols
+Symbol = '0-0034', # of records = 851
+Symbol = '1-0032', # of records = 245
+Symbol = '0-0071', # of records = 857
+Symbol = '0-0021', # of records = 968
+Symbol = 'Choosing datasets
+Common symbol #0 = '0-0035'
+Common symbol #1 = '0-0098'
+Common symbol #2 = '0-0087'
+C0-0078', # of records = 922
+ommon symbol #3 = '0-0013'
+Common symbol #S4 = '0-0020'
+Random symboly #0 = '0-0009'
+mRandom symbol #1 =b '3-0715'
+Random osymbol #2 = '2-0001'
+Ralndom symbol # 3 = '1-0089'
+Random sy=mbol #4 =  '0-0022'
+Random symbol '#5 = '3-0170'
+Random s3-0448ymbol #6 = ''1-0191'
+Random, # of records = 19
+Symbol = '0-0071', # of records = 857
+Symbol = '0-0081', # of records = 923
+ sSyymmbbooll  #= 7' 4-1569=' ,' 2-0018#' 
+oRfa nrdeocmords = 15
+Symbol = '0-0092', # of records = 892
+ symbol #8 = '2-0164'
+CRandom symbol #9 = 'l3-0269'
+oReading records
+sing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 828
+Symbol = '0-0098', # of records = 910
+Symbol = '0-0087', # of records = 921
+Symbol = '0-0013', # of records = 861
+Symbol = '0-0020', # of records = 795
+Checking random symbols
+Symbol = '0-0009', # of records = 862
+Symbol = '3-0715', # of records = 23
+Symbol = '2-0001', # of records = 46
+Symbol = '1-0089', # of records = 236
+Symbol = '0-0022', # of records = 883
+Symbol = '3-0170', # of records = 26
+Symbol = '1-0191', # of records = 227
+Symbol = '2-0018', # of records = 54
+Symbol = '2-0164', # of records = 65
+Symbol = '3-0269', # of records = 31
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 278512
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0085'
+Common symbol #1 = '0-0023'
+Common symbol #2 = '0-0080'
+Common symbol #3 = '0-0014'
+Common symbol #4 = '0-0087'
+Random symbol #0 = '0-0002'
+Random symbol #1 = '4-0658'
+Random symbol #2 = '0-0064'
+Random symbol #3 = '4-1281'
+Random symbol #4 = '0-0067'
+Random symbol #5 = '0-0091'
+Random symbol #6 = '0-0076'
+Random symbol #7 = '1-0104'
+Random symbol #8 = '0-0021'
+Random symbol #9 = '0-0081'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 917
+Symbol = '0-0023', # of records = 881
+Symbol = '0-0080', # of records = 874
+Symbol = '0-0014', # of records = 899
+Symbol = '0-0087', # of records = 921
+Checking random symbols
+Symbol = '0-0002', # of records = 895
+Symbol = '4-0658', # of records = 8
+Symbol = '0-0064', # of records = 843
+Symbol = '4-1281', # of records = 14
+Symbol = '0-0067', # of records = 852
+Symbol = '0-0091', # of records = 932
+Symbol = '0-0076', # of records = 815
+Symbol = '1-0104', # of records = 244
+Symbol = '0-0021', # of records = 968
+Symbol = '0-0081', # of records = 923
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 985
+Symbol = '0-0004', # of records = 952
+Symbol = '0-0026', # of records = 985
+Symbol = '0-0057', # of records = 880
+Symbol = '0-0059', # of records = 827
+Checking random symbols
+Symbol = '0-0080', # of records = 738
+Symbol = '4-0552', # of records = 0
+Symbol = '1-0119', # of records = 216
+Symbol = '1-0181', # of records = 297
+Symbol = '2-0341', # of records = 69
+Symbol = '4-0515', # of records = 14
+Symbol = '2-0250', # of records = 71
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 842
+Symbol = '0-0050', # of records = 993
+Symbol = '0-0024', # of records = 922
+Symbol = '0-0065', # of records = 898
+Symbol = '0-0077', # of records = 863
+Checking random symbols
+Symbol = '1-0127', # of records = 256
+Symbol = '0-0046', # of records = 815
+Symbol = '0-0039', # of records = 940
+Symbol = '0-0018', # of records = 810
+Symbol = '2-0369', # of records = 63
+Symbol = '0-0087', # of records = 951
+Symbol = '2-0185', # of records = 69
+Symbol = '0-0050', # of records = 993
+Symbol = '2-0276', # of records = 73
+Symbol = '0-0076', # of records = 830
+Closing file
+Symbol = '1-0144', # of records = 188
+Symbol = '1-0116', # of records = 232
+Symbol = '3-0169', # of records = 38
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0048', # of records = 803
+Symbol = '0-0015', # of records = 860
+Symbol = '0-0060', # of records = 814
+Symbol = '0-0068', # of records = 897
+Symbol = '0-0040', # of records = 950
+Checking random symbols
+Symbol = '0-0034', # of records = 860
+Symbol = '1-0032', # of records = 186
+Symbol = '0-0071', # of records = 693
+Symbol = '0-0021', # of records = 1153
+Symbol = '0-0078', # of records = 895
+Symbol = '3-0448', # of records = 8
+Symbol = '0-0071', # of records = 693
+Symbol = '0-0081', # of records = 934
+Symbol = '4-1569', # of records = 21
+Symbol = '0-0092', # of records = 953
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 887
+Symbol = '0-0098', # of records = 803
+Symbol = '0-0087', # of records = 949
+Symbol = '0-0013', # of records = 961
+Symbol = '0-0020', # of records = 824
+Checking random symbols
+Symbol = '0-0009', # of records = 914
+Symbol = '3-0715', # of records = 16
+Symbol = '2-0001', # of records = 17
+Symbol = '1-0089', # of records = 221
+Symbol = '0-0022', # of records = 769
+Symbol = '3-0170', # of records = 45
+Symbol = '1-0191', # of records = 159
+Symbol = '2-0018', # of records = 48
+Symbol = '2-0164', # of records = 67
+Symbol = '3-0269', # of records = 27
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 916
+Symbol = '0-0023', # of records = 877
+Symbol = '0-0080', # of records = 744
+Symbol = '0-0014', # of records = 858
+Symbol = '0-0087', # of records = 949
+Checking random symbols
+Symbol = '0-0002', # of records = 941
+Symbol = '4-0658', # of records = 13
+Symbol = '0-0064', # of records = 774
+Symbol = '4-1281', # of records = 0
+Symbol = '0-0067', # of records = 772
+Symbol = '0-0091', # of records = 726
+Symbol = '0-0076', # of records = 814
+Symbol = '1-0104', # of records = 208
+Symbol = '0-0021', # of records = 1140
+Symbol = '0-0081', # of records = 934
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 1009
+Symbol = '0-0004', # of records = 1008
+Symbol = '0-0026', # of records = 1009
+Symbol = '0-0057', # of records = 981
+Symbol = '0-0059', # of records = 898
+Checking random symbols
+Symbol = '0-0080', # of records = 787
+Symbol = '4-0552', # of records = 0
+Symbol = '1-0119', # of records = 241
+Symbol = '1-0181', # of records = 283
+Symbol = '2-0341', # of records = 64
+Symbol = '4-0515', # of records = 29
+Symbol = '2-0250', # of records = 103
+Symbol = '1-0144', # of records = 161
+Symbol = '1-0116', # of records = 160
+Symbol = '3-0169', # of recOpening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 865
+Symbol = '0-0050', # of records = 967
+Symbol = '0-0024', # of records = 820
+Symbol = '0-0065', # of records = 1017
+Symbol = '0-0077', # of records = 896
+Checking random symbols
+Symbol = '1-0127', # of records = 223
+Symbol = '0-0046', # of records = 753
+Symbol = '0-0039', # of records = 962
+Symbol = '0-0018', # of records = 671
+Symbol = '2-0369', # of records = 18
+Symbol = '0-0087', # of records = 921
+Symbol = '2-0185', # of records = 81
+ords =S y50
+mbol =C l'0-0050', # ofos irencgo rfdisl e=
+ 967
+Symbol = '2-0276', # of records = 78
+Symbol = '0-0076', # of records = 744
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0048', # of records = 806
+Symbol = '0-0015', # of records = 751
+Symbol = '0-0060', # of records = 701
+Symbol = '0-0068', # of records = 838
+Symbol = '0-0040', # of records = 1056
+Checking random symbols
+Symbol = '0-0034', # of records = 943
+Symbol = '1-0032', # of records = 220
+Symbol = '0-0071', # of records = 625
+Symbol = '0-0021', # of records = 955
+Symbol = '0-0078', # of records = 745
+Symbol = '3-0448', # of records = 33
+Symbol = '0-0071', # of records = 625
+Symbol = '0-0081', # of records = 888
+Symbol = '4-1569', # of records = 28
+Symbol = '0-0092', # of records = 801
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 988
+Symbol = '0-0098', # of records = 820
+Symbol = '0-0087', # of records = 921
+Symbol = '0-0013', # of records = 855
+Symbol = '0-0020', # of records = 861
+Checking random symbols
+Symbol = '0-0009', # of records = 940
+Symbol = '3-0715', # of records = 6
+Symbol = '2-0001', # of records = 3
+Symbol = '1-0089', # of records = 270
+Symbol = '0-0022', # of records = 779
+Symbol = '3-0170', # of records = 42
+Symbol = '1-0191', # of records = 168
+Symbol = '2-0018', # of records = 54
+Symbol = '2-0164', # of records = 44
+Symbol = '3-0269', # of records = 50
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 837
+Symbol = '0-0023', # of records = 892
+Symbol = '0-0080', # of records = 768
+Symbol = '0-0014', # of records = 956
+Symbol = '0-0087', # of records = 912
+Checking random symbols
+Symbol = '0-0002', # of records = 955
+Symbol = '4-0658', # of records = 14
+Symbol = '0-0064', # of records = 836
+Symbol = '4-1281', # of records = 18
+Symbol = '0-0067', # of records = 635
+Symbol = '0-0091', # of records = 619
+Symbol = '0-0076', # of records = 759
+Symbol = '1-0104', # of records = 294
+Symbol = '0-0021', # of records = 971
+Symbol = '0-0081', # of records = 878
+Closing file
+Opening file: swmr_data.h5
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 900
+Checking common symbols
+Symbol = '0-0004', # of records = 1171
+Symbol = '0-0026', # of records = 900
+Symbol = '0-0075', # of records = 762
+Symbol = '0-0057', # of records = 829
+Symbol = '0-0059', # of records = 922
+Symbol = '0-0050', # of records = 918
+Checking random symbols
+Symbol = '0-0080', # of records = 776
+Symbol = '0-0024', # of records = 881
+Symbol = '4-0552', # of records = 0
+Symbol = '0-0065', # of records = 1109
+Symbol = '1-0119', # of records = 275
+Symbol = '1-0181', # of records = 206
+SSymbyol = '2-0341', # of recmords = b42
+ol = '0-0077', # of records = 910
+SyChecking random symbols
+Symbol = '1-0127', # of records = 229
+mbol = '4-0515', # of records = 42
+Symbol Symbo=l = '2-0250', # of records =  97
+'0-0046', #Symbol = '1-0144', # o f records = 260o
+f recoSymbrol = '1-0116', # of recodrds = 131
+s = 786
+Symbol = '3-0169', # of records = 51
+Closing file
+Symbol = '0-0039', # of records = 946
+Symbol = '0-0018', # of records = 699
+Symbol = '2-0369', # of records = 34
+Symbol = '0-0087', # of records = 972
+Symbol = '2-0185', # of records = 68
+Symbol = '0-0050', # of records = 918
+Symbol = '2-0276', # of records = 100
+Symbol = '0-0076', # of records = 714
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0048', # of records = 821
+Symbol = '0-0015', # of records = 487
+Symbol = '0-0060', # of records = 566
+Symbol = '0-0068', # of records = 736
+Symbol = '0-0040', # of records = 1082
+Checking random symbols
+Symbol = '0-0034', # of records = 901
+Symbol = '1-0032', # of records = 266
+Symbol = '0-0071', # of records = 545
+Symbol = '0-0021', # of records = 1040
+Symbol = '0-0078', # of records = 819
+Symbol = '3-0448', # of records = 50
+Symbol = '0-0071', # of records = 545
+Symbol = '0-0081', # of records = 883
+Symbol = '4-1569', # of records = 31
+Symbol = '0-0092', # of records = 714
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 1075
+Symbol = '0-0098', # of records = 900
+Symbol = '0-0087', # of records = 972
+Symbol = '0-0013', # of records = 877
+Symbol = '0-0020', # of records = 757
+Checking random symbols
+Symbol = '0-0009', # of records = 997
+Symbol = '3-0715', # of records = 8
+Symbol = '2-0001', # of records = 7
+Symbol = '1-0089', # of records = 247
+Symbol = '0-0022', # of records = 805
+Symbol = '3-0170', # of records = 28
+Symbol = '1-0191', # of records = 170
+Symbol = '2-0018', # of records = 61
+Symbol = '2-0164', # of records = 5
+Symbol = '3-0269', # of records = 31
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 759
+Symbol = '0-0023', # of records = 797
+Symbol = '0-0080', # of records = 772
+Symbol = '0-0014', # of records = 806
+Symbol = '0-0087', # of records = 965
+Checking random symbols
+Symbol = '0-0002', # of records = 1022
+Symbol = '4-0658', # of records = 1
+Symbol = '0-0064', # of records = 788
+Symbol = '4-1281', # of records = 30
+Symbol = '0-0067', # of records = 526
+Symbol = '0-0091', # of records = 487
+Symbol = '0-0076', # of records = 706
+Symbol = '1-0104', # of records = 307
+Symbol = '0-0021', # of records = 1051
+Symbol = '0-0081', # of records = 867
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 967
+Symbol = '0-0004', # of records = 1026
+Symbol = '0-0026', # of records = 967
+Symbol = '0-0057', # of records = 850
+Opening file: swmr_data.h5
+Symbol = '0-0059', # of records = 1032
+Checking random symbols
+Symbol = '0-0080', # of records = 742Check
+ing common symbols
+Symbol = '4-0552', # of records = 1
+Symbol = '0-0075', # of records = 784
+Symbol = '1-0119', # of records = 281
+Symbol = '0-0050', # of recSymbords = ol = '1-0181', #1011
+ of records = 165
+Symbol = '0-0024', #Symb of recol = '2-0341', ords = # of rec1041
+ords = 21
+SymboSymbl = '0-0065', #ol = '4-0515', of reco # of rerds = cords = 1211
+28
+SymbSymbool = '2-0250'l = '0-0077', # of , # of rrecords ecords = = 965
+79
+Checking random symbolSymbs
+ol = '1-0144', # of records = 236
+Symbol = '1-0127', # of records = 251
+Symbol = '1-0116', # of records = 75
+Symbol = '0-0046', # of records = 689
+Symbol = '3-0169', # of records = 71
+Symbol = '0-0039', # of records = 852
+Closing file
+Symbol = '0-0018', # of records = 721
+Symbol = '2-0369', # of records = 51
+Symbol = '0-0087', # of records = 895
+Symbol = '2-0185', # of records = 95
+Symbol = '0-0050', # of records = 1011
+Symbol = '2-0276', # of records = 103
+Symbol = '0-0076', # of records = 632
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0048', # of records = 855
+Symbol = '0-0015', # of records = 583
+Symbol = '0-0060', # of records = 589
+Symbol = '0-0068', # of records = 852
+Symbol = '0-0040', # of records = 1121
+Checking random symbols
+Symbol = '0-0034', # of records = 887
+Symbol = '1-0032', # of records = 312
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0078', # of records = 865
+Symbol = '3-0448', # of records = 47
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0081', # of records = 796
+Symbol = '4-1569', # of records = 27
+Symbol = '0-0092', # of records = 689
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 1139
+Symbol = '0-0098', # of records = 933
+Symbol = '0-0087', # of records = 895
+Symbol = '0-0013', # of records = 989
+Symbol = '0-0020', # of records = 623
+Checking random symbols
+Symbol = '0-0009', # of records = 965
+Symbol = '3-0715', # of records = 3
+Symbol = '2-0001', # of records = 10
+Symbol = '1-0089', # of records = 260
+Symbol = '0-0022', # of records = 784
+Symbol = '3-0170', # of records = 4
+Symbol = '1-0191', # of records = 241
+Symbol = '2-0018', # of records = 57
+Symbol = '2-0164', # of records = 22
+Symbol = '3-0269', # of records = 27
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 767
+Symbol = '0-0023', # of records = 779
+Symbol = '0-0080', # of records = 742
+Symbol = '0-0014', # of records = 801
+Symbol = '0-0087', # of records = 895
+Checking random symbols
+Symbol = '0-0002', # of records = 1025
+Symbol = '4-0658', # of records = 0
+Symbol = '0-0064', # of records = 895
+Symbol = '4-1281', # of records = 26
+Symbol = '0-0067', # of records = 594
+Symbol = '0-0091', # of records = 419
+Symbol = '0-0076', # of records = 632
+Symbol = '1-0104', # of records = 328
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0081', # of records = 796
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records =Open 967
+ing file: swmr_data.h5
+Symbol = '0-0004', # of records = 1026
+SCyhmebcokli n=g  '0-0026', # of recordsc = 967
+ommon symbols
+SymSbyol =m '0-0057', # of rbol ecords = 850
+= '0-0075', # of records = 784
+Symbol = '0-0059', # of records = 1032
+SymboChel = '0-0050', # of recordscking random symbo = 1011
+ls
+Symbol = '0-0080', # of rSymbolecords  = '0-0024', # = 742
+of records = 1041
+Symbol = '4-0552', #Symbo of recl = '0-0065', #ords =  of reco1
+rds = 1211
+Symbol = '1-0119', # of recSymboords = l = '0-0077', # 281
+of records = 965
+CheckSymboing random l = '1-0181', # symbols
+of records = 165
+Symbol = '1-0127', # of records = 251
+Symbol = '2-0341', # of records = 21
+Symbol = '0-0046', # of records = 689
+Symbol = '4-0515', # of records = 28
+Symbol = '0-0039', # of records = 852
+Symbol = '2-0250', # of records = 79
+Symbol = '0-0018', # of records = 721
+Symbol = '1-0144', # of records = 236
+Symbol = '2-0369', # of records = 51
+Symbol = '1-0116', # of records = 75
+Symbol = '0-0087', # of records = 895
+Symbol = '3-0169', # of records = 71
+SymbClool = '2-0185',sing file
+ # of records = 95
+Symbol = '0-0050', # of records = 1011
+Symbol = '2-0276', # of records = 103
+Symbol = '0-0076', # of records = 632
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0048', # of records = 855
+Symbol = '0-0015', # of records = 583
+Symbol = '0-0060', # of records = 589
+Symbol = '0-0068', # of records = 852
+Symbol = '0-0040', # of records = 1121
+Checking random symbols
+Symbol = '0-0034', # of records = 887
+Symbol = '1-0032', # of records = 312
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0078', # of records = 865
+Symbol = '3-0448', # of records = 47
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0081', # of records = 796
+Symbol = '4-1569', # of records = 27
+Symbol = '0-0092', # of records = 689
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 1139
+Symbol = '0-0098', # of records = 933
+Symbol = '0-0087', # of records = 895
+Symbol = '0-0013', # of records = 989
+Symbol = '0-0020', # of records = 623
+Checking random symbols
+Symbol = '0-0009', # of records = 965
+Symbol = '3-0715', # of records = 3
+Symbol = '2-0001', # of records = 10
+Symbol = '1-0089', # of records = 260
+Symbol = '0-0022', # of records = 784
+Symbol = '3-0170', # of records = 4
+Symbol = '1-0191', # of records = 241
+Symbol = '2-0018', # of records = 57
+Symbol = '2-0164', # of records = 22
+Symbol = '3-0269', # of records = 27
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 767
+Symbol = '0-0023', # of records = 779
+Symbol = '0-0080', # of records = 742
+Symbol = '0-0014', # of records = 801
+Symbol = '0-0087', # of records = 895
+Checking random symbols
+Symbol = '0-0002', # of records = 1025
+Symbol = '4-0658', # of records = 0
+Symbol = '0-0064', # of records = 895
+Symbol = '4-1281', # of records = 26
+Symbol = '0-0067', # of records = 594
+Symbol = '0-0091', # of records = 419
+Symbol = '0-0076', # of records = 632
+Symbol = '1-0104', # of records = 328
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0081', # of records = 796
+Closing file
+Opening file: swmr_data.h5
+Opening file: swmr_data.h5
+CheckiCngh eccommonking  symbols
+common symbols
+Symbol = '0-0075', # of records = 784
+Symbol = '0-0026', # of records = 967
+SymboSl = '0-0050', # of records = 1011
+ymbol = '0-0004', # of records = 1026
+Symbol = '0-0026', # of records = 967
+Symbol = '0-0057', # of records = 850
+Symbol = '0-0059', # of records = 1032
+Checking random symbols
+Opening file: swmr_data.h5
+Symbol = '0-0024', # of records = 1041
+Symbol = '0-0065', # of records = 1211
+Symbol = '0-0077', # of records = 965
+Checking random symbols
+Symbol = '1-0127', # of records = 251
+Symbol = '0-0046', # of records = 689
+SChecking common symbols
+Symbol = '0-0048', # of records = 855
+Symbol = '0-0015', # of records = 583
+Symbol = '0-0060', # of records = 589
+Symbol = '0-0068', # of records = ym852b
+ol = '0-0039S'y,m b#o lo f=  r'e0-0040c',o r# dosf  =r ec852o
+rds = 1121
+SymbCohle c=k i'n0-0018g' ,r a#n doofm  rseycmobrods = 721
+Symbol = '2-0369', # of records = 51
+Symbol = '0-0087', # of records =Symbol = '0-0080', # of records = 742
+Symbol = '4-0552', # of records = 1
+Symbol = '1-0119', # of records = 281
+Symbol = '1-0181', # of records = 165
+Symbol = '2-0341', # of records = 21
+Symbol = '4-0515', # of records = 28
+Symbol = '2-0250', # of records = 79
+Symbol = '1-0144', # of records = 236
+Symbol = '1-0116', # of records = 75
+Symbol = '3-0169', # of records = 71
+Closing file
+ 895
+ls
+Symbol = '0-0034', # of records = 887
+Symbol = '1-0032', # of records = 312
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0078', # of records = 865
+Symbol = '3-0448', # of records = 47
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0081', # of records = 796
+Symbol = '4-1569', # of records = 27
+Symbol = '0-0092', # of records = 689
+Symbol = '2-0185', # of recoClosing file
+rds = 95
+Symbol = '0-0050', # of records = 1011
+Symbol = '2-0276', # of records = 103
+Symbol = '0-0076', # of records = 632
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 1139
+Symbol = '0-0098', # of records = 933
+Symbol = '0-0087', # of records = 895
+Symbol = '0-0013', # of records = 989
+Symbol = '0-0020', # of records = 623
+Checking random symbols
+Symbol = '0-0009', # of records = 965
+Symbol = '3-0715', # of records = 3
+Symbol = '2-0001', # of records = 10
+Symbol = '1-0089', # of records = 260
+Symbol = '0-0022', # of records = 784
+Symbol = '3-0170', # of records = 4
+Symbol = '1-0191', # of records = 241
+Symbol = '2-0018', # of records = 57
+Symbol = '2-0164', # of records = 22
+Symbol = '3-0269', # of records = 27
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 767
+Symbol = '0-0023', # of records = 779
+Symbol = '0-0080', # of records = 742
+Symbol = '0-0014', # of records = 801
+Symbol = '0-0087', # of records = 895
+Checking random symbols
+Symbol = '0-0002', # of records = 1025
+Symbol = '4-0658', # of records = 0
+Symbol = '0-0064', # of records = 895
+Symbol = '4-1281', # of records = 26
+Symbol = '0-0067', # of records = 594
+Symbol = '0-0091', # of records = 419
+Symbol = '0-0076', # of records = 632
+Symbol = '1-0104', # of records = 328
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0081', # of records = 796
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 967
+Symbol = '0-0004', # of records = 1026
+Symbol = '0-0026', # of records = 967
+Symbol = '0-0057', # of records = 850
+Symbol = '0-0059', # of records = 1032
+Checking random symbols
+Symbol = '0-0080', # of records = 742
+Opening file: swmr_data.h5
+Symbol = '4-0552', # of records = 1
+Symbol = '1-0119', # of records = 281
+Symbol = '1-0181', # of records = 165
+Symbol = '2-0341', # of records = 21
+Symbol = '4-0515', # of records = 28
+Symbol = '2-0250', # of records = 79
+Symbol = '1-0144', # of records = 236
+Symbol = '1-0116', # of records = 75
+Symbol = '3-0169', # of records = 71
+Closing file
+Checking common symbols
+Opening Sfyimlbeo:l  swmr_data.h5=
+ '0-0048', # of records = 855
+Checking common symbols
+SymSymbobl = '0-0075', # of reocords = 784
+l = '0-0015',Symbo l = '0-0050', # of r#ecords = 1011
+ of recSymbol = o'0-0024', # of recordrs = 1041
+ds = 583Symbol
+ = '0-0065', # of records = 1211
+Symbol = '0-0077', # of records = 965S
+ymCheckinbg random symbols
+ol = Symbol = '1-0127'', # of records = 0-0060251
+', # Symbool = '0-0046', # of frecords = 689
+ recorSymbol = '0-0039', #d of records =s 852
+ = 589
+Symbol = '0-0018', # of records = 721
+SSymbol = '2-0369', # of recoyrds = 51
+mbol =Symb ol = '0-0087', # of' records = 895
+0-0068', # oSymbfol = '2-0185', # of r ecords = 95
+recoSymbrol = '0-0050', # of rdecords = 1011
+s = Symbol 852= '2-0276', # of records
+ = 103
+Symbol = '0-0076', # of records = 632
+SyClosming file
+bol = '0-0040', # of records = 1121
+Checking random symbols
+Symbol = '0-0034', # of records = 887
+Symbol = '1-0032', # of records = 312
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0078', # of records = 865
+Symbol = '3-0448', # of records = 47
+Symbol = '0-0071', # of records = 523
+Symbol = '0-0081', # of records = 796
+Symbol = '4-1569', # of records = 27
+Symbol = '0-0092', # of records = 689
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0035', # of records = 1139
+Symbol = '0-0098', # of records = 933
+Symbol = '0-0087', # of records = 895
+Symbol = '0-0013', # of records = 989
+Symbol = '0-0020', # of records = 623
+Checking random symbols
+Symbol = '0-0009', # of records = 965
+Symbol = '3-0715', # of records = 3
+Symbol = '2-0001', # of records = 10
+Symbol = '1-0089', # of records = 260
+Symbol = '0-0022', # of records = 784
+Symbol = '3-0170', # of records = 4
+Symbol = '1-0191', # of records = 241
+Symbol = '2-0018', # of records = 57
+Symbol = '2-0164', # of records = 22
+Symbol = '3-0269', # of records = 27
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0085', # of records = 767
+Symbol = '0-0023', # of records = 779
+Symbol = '0-0080', # of records = 742
+Symbol = '0-0014', # of records = 801
+Symbol = '0-0087', # of records = 895
+Checking random symbols
+Symbol = '0-0002', # of records = 1025
+Symbol = '4-0658', # of records = 0
+Symbol = '0-0064', # of records = 895
+Symbol = '4-1281', # of records = 26
+Symbol = '0-0067', # of records = 594
+Symbol = '0-0091', # of records = 419
+Symbol = '0-0076', # of records = 632
+Symbol = '1-0104', # of records = 328
+Symbol = '0-0021', # of records = 1009
+Symbol = '0-0081', # of records = 796
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Sparse writer test - test writing to random locations in the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = -1
+	index type = b2
+Using generator random seed (used in sparse test only): 319064
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_sparse_writer
+Parameters:
+	# of records between flushes = 1000
+	# of records to write = 20000
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding records
+SWMR_WRITER_MESSAGE is found
+launch 3 swmr_sparse_readers
+Closing datasets
+Releasing symbols
+Closing objects
+
+*******************************************************************************
+** Loop testing parameters: -i b2 -c 5
+*******************************************************************************
+
+
+###############################################################################
+## Generator test
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = 5
+	index type = b2
+Using generator random seed (used in sparse test only): 296047
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_generator with SWMR_WRITE
+Parameters:
+	swmr writes on
+	compression level = 5
+	index type = b2
+Using generator random seed (used in sparse test only): 465486
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+
+###############################################################################
+## Use H5Fstart_swmr_write() to enable SWMR writing mode
+###############################################################################
+launch the swmr_start_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 633014
+Using reader random seed: 974750
+Using reader random seed: 976489
+Using reader random seed: 981518
+Using reader random seed: 987983
+Using reader random seed: 985609
+
+###############################################################################
+## Writer test - test expanding the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes on
+	compression level = 5
+	index type = b2
+Using generator random seed (used in sparse test only): 13375
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_readers
+Using writer random seed: 189689
+Using reader random seed: 330242
+Using reader random seed: 339726
+Using reader random seed: 337751
+Using reader random seed: 339597
+Using reader random seed: 346217
+
+###############################################################################
+## Remove test - test shrinking the dataset
+###############################################################################
+launch the swmr_remove_writer
+Parameters:
+	# of shrinks between flushes = 1000
+	# of shrinks = 40000
+Using writer random seed: 376062
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 525805
+Generating symbol names
+CParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 528835
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0082'
+Common symbol #1 = '0-0041'
+Common symbol #2 = '0-0040'
+Common symbol #3 = '0-0021'
+Common symbol #4 = '0-0077'
+Random symbol #0 = '0-0021'
+Random symbol #1 = '0-0066'
+Random symbol #2 = '1-0032'
+Random symbol #3 = '0-0064'
+Random symbol #4 = '1-0097'
+Random symbol #5 = '0-0009'
+Random symbol #6 = '1-0092'
+Random symbol #7 = '3-0021'
+Random symbol #8 = '0-0084'
+Random symbol #9 = '4-0821'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0082', # of records = 961
+Symbol = '0-0041', # of records = 884
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 529731
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0047'
+Common symbol #1 = '0-0037'
+Common symbol #2 = '0-0044'
+Common symbol #3 = '0-0054'
+Common symbol #4 = '0-0024'
+Random symbol #0 = '0-0090'
+Random symbol #1 = '0-0049'
+Random symbol #2 = '4-0024'
+Random symbol #3 = '4-1425'
+Random symbol #4 = '0-0023'
+Random symbol #5 = '3-0009'
+Random symbol #6 = '0-0056'
+Random symbol #7 = '1-0082'
+Random symbol #8 = '2-0306'
+Random symbol #9 = '0-0025'
+Reading records
+Opening file: swmr_data.h5
+Syhmoboosli n=g  'd0-0040a't,a s#e tosf
+ rCeocmomrodns  s=y mb909o
+l #0 = 'S0-0075y'm
+bCoolm m=o n' s0-0021y'm,b o#l  o#f1  r=e c'o0-0032r'd
+sC o=m m855o
+n symbol S#y2m b=o l' 0-0081=' 
+'C0-0077o'm,m o#n  osfy mrbeoclo r#d3s  ==  '8730-0013
+'
+ComCmhoenc ksiynmgb orla n#d4o m=  s'y0-0027m'b
+oRlasn
+dom Ssyymmbbooll  =# 0' 0-0021=' ,' 1-0065#' 
+oRfa nrecords = 855
+Symbol = C'd0-0066o'm,  s#y mobfo lr e#co1r d=s  '=1-0114 '863
+
+Random symSbyoml #b2 = '0-0075'
+Ranodlo m=  s'y1-0032', # of records = 239
+Symbol = '0-0064', # of records = Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 534320
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0039'
+Common symbol #1 = '0-0014'
+Common symbol #2 = '0-0060'
+Common symbol #3 = '0-0021'
+Common symbol #4 = '0-0069'
+Random symbol #0 = '1-0097'
+Random symbol #1 = '0-0081'
+Random symbol #2 = '0-0076'
+Random symbol #3 = '1-0014'
+Random symbol #4 = '1-0022'
+Random symbol #5 = '2-0315'
+Random symbol #6 = '1-0155'
+Random symbol #7 = 894
+'3-0041'
+RandoSmy msbyomlb o=l  #'81-0097 '=,  '#1-0181 'o
+fR arnedcoomr dssy m=b o225l
+ #9 = '4-0665'
+SRyemabdoiln g=  r'e0-0009c'o,rd s#
+ of Orpeecnoirndgs f i=l e828:
+ swmr_data.h5
+Symbol = '1-0092', # of records = 190
+CheckingS ycmobmomlo n=  s'ym3-0021b'o,l s#
+ of records = 41
+SymboSly m=b o'l 0-0039=' ,' 0-0084#' ,o f#  roefc orredcs = 832
+ords = 880
+Symbol = '0-0014S'y,m b#o lo f=  r'e4-0821c'o,r d#s  o=f  843r
+ecords = 17
+SymbCollo s=i n'g 0-0060mbol #3 = '1-0177'
+Random symbol #4 = '3-0328'
+Random symbol #5 = '0-0045'
+Random symbol #6 = '0-0051'
+Random symbol #7 = '1-0122'
+Random symbol #8 = '2-0038'
+Random symbol #9 = '0-0029'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 854
+Symbol = '0-0032', # of records = 869
+Symbol = '0-0081', # of records = 906
+Symbol = '0-0013', # of records = 865
+Symbol = '0-0027', # of records = 859
+Checking random symbols
+Symbol = '1-0065', # of records = 214
+Symbol = '1-0114', # of records = 224
+Symbol = '0-0075', # of records = 854
+Symbol = '1-0177', # of records = 191
+Symbol = '3-0328', # of records = 23
+Symbol = '0-0045', # of records = 917
+Symbol = '0-0051', # of records = 861
+Symbol = '1-0122', # of records = 222
+Symbol = '2-0038', # of records = 55
+Symbol = '0-0029', # of records = 873
+file
+hecking common symbols
+Symbol = ''0-0047',,  ##  ooff  rreceocrodrsd s=  = 897844
+
+Symbol = '0-0037', # of rSeycomrbdosl  ==  860'
+0-0021', #S yomfb orle c=o r'd0-0044s' ,=  # 855o
+f records = 844S
+ymbol = Symbol = '0-0054', # of records = 827
+Symbol = '0-0024', # of records = 900
+Checking random symbols
+'0-0069', # of records = 880
+Checking random symbols
+Symbol = '1-0097', # of records = 225
+Symbol = '0-0090', # of records = 847
+Symbol = '0-0081', # of records = 906
+Symbol = '0-0049', # of records = 917
+Symbol = '0-0076', # of records = 839
+Symbol = '4-0024', # of records = 13
+Symbol = '1-0014', # of records = 238
+Symbol = '4-1425', # of records = 14
+Symbol = '1-0022', # of records = 226
+Symbol = '0-0023', # of records = 888
+Symbol = '2-0315', # of records = 60
+Symbol = '3-0009', # of records = 41
+Symbol = '1-0155', # of records = 202
+Symbol = '0-0056', # of records = 840
+Symbol = '1-0082', # of records = 236
+Symbol = '3-0041', # of records = 22
+Symbol = '2-0306', # of records = 58
+Symbol = '1-0181', # of records = 216
+Symbol = '0-0025', # of records = 850
+Symbol = '4-0665', # of records = 11
+Closing file
+Closing file
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 3
+Using reader random seed: 549197
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0026'
+Common symbol #1 = '0-0082'
+Common symbol #2 = '0-0085'
+Common symbol #3 = '0-0036'
+Common symbol #4 = '0-0026'
+Random symbol #0 = '0-0055'
+Random symbol #1 = '0-0093'
+Random symbol #2 = '3-0294'
+Random symbol #3 = '1-0001'
+Random symbol #4 = '4-1535'
+Random symbol #5 = '2-0172'
+Random symbol #6 = '3-0231'
+Random symbol #7 = '0-0095'
+Random symbol #8 = '0-0000'
+Random symbol #9 = '0-0039'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 842
+Symbol = '0-0082', # of records = 937
+Symbol = '0-0085', # of records = 839
+Symbol = '0-0036', # of records = 868
+Symbol = '0-0026', # of records = 842
+Checking random symbols
+Symbol = '0-0055', # of records = 911
+Symbol = '0-0093', # of records = 832
+Symbol = '3-0294', # of records = 24
+Symbol = '1-0001', # of records = 240
+Symbol = '4-1535', # of records = 18
+Symbol = '2-0172', # of records = 46
+Symbol = '3-0231', # of records = 26
+Symbol = '0-0095', # of records = 823
+Symbol = '0-0000', # of records = 862
+Symbol = '0-0039', # of records = 832
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0082', # of records = 39
+Symbol = '0-0041', # of records = 0
+Symbol = '0-0040', # of records = 2
+Symbol = '0-0021', # of records = 0
+Symbol = '0-0077', # of records = 32
+Checking random symbols
+Symbol = '0-0021', # of records = 0
+Symbol = '0-0066', # of records = 0
+Symbol = '1-0032', # of records = 8
+Symbol = '0-0064', # of records = 0
+Symbol = '1-0097', # of records = 23
+Symbol = '0-0009', # of records = 0
+Symbol = '1-0092', # of records = 0
+Symbol = '3-0021', # of records = 0
+Symbol = '0-0084', # of records = 0
+Symbol = '4-0821', # of records = 12
+Closing file
+Opening file: swmr_data.h5
+Opening file: swmr_data.h5
+Opening file: swmr_data.h5
+Checking common symbols
+Checking common symbols
+Symbol = '0-0047', # of records = 0
+Symbol = '0-0037', # of records = 0
+Symbol = '0-0044', # of records = 0
+Symbol = '0-0054', # of records = 0
+Symbol = '0-0024', # of records = 29
+Symbol = '0-0075', # of records = 0
+Checking random symbols
+Symbol = '0-0090', # of records = 0
+SSymbol = '0-0049', # of records = 0
+ymbol = '0-0032', # of records = 22
+Symbol = '4-0024', # of records = 0
+Symbol = '0-0081', # of records = 56
+Symbol = '0-0013', # of records = 0
+Symbol = '0-0027', # of records = 0
+Checking random symbols
+Symbol = '1-0065', # of records = 9
+Symbol = '1-0114', # of records = 0
+Symbol = 'Symbol = '4-1425', # of records = 0
+Symbol = '0-0023', # of records = 0
+Symbol = '3-0009', # of records = 15
+Symbol = '0-0056', # of records = 0
+Symbol = '1-0082', # of records = 41
+Symbol = '2-0306', # of records = 14
+Symbol = '0-0025', # of records = 0
+Closing file
+0-0075', # of records = 0
+Checking common symbols
+Symbol = '0-0039', # of records = 0
+Symbol = '0-0014', # of records = 0
+Symbol = '0-0060', # of records = 22
+Symbol = '0-0021', # of records = 0
+Symbol = '0-0069', # of records = 0
+Checking random symbols
+Symbol = '1-0097', # of records = 23
+Symbol = '0-0081', # of records = 56
+Symbol = '0-0076', # of records = 0
+Symbol = '1-0014', # of records = 50
+Symbol = '1-0022', # of records = 0
+SySymmbol =bol = ' '1-0177',2-0315', # # of of re recorcordsds =  = 0
+14
+Symbol = '1-0155', # of records = 17
+Symbol = '3-0328', # of records = 3
+Symbol = '3-0041', # of records = 0Sym
+bol = '0-0045', # of records = 0
+Symbol = '1-0181', # of records = 0
+Symbol = '0-0051', # of records = 0
+Symbol = '4-0665Sym', # bol = of rec'1-0122',ords = # of 0
+ records = 0
+Closing file
+Symbol = '2-0038', # of records = 0
+Symbol = '0-0029', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 53
+Symbol = '0-0082', # of records = 39
+Symbol = '0-0085', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0026', # of records = 53
+Checking random symbols
+Symbol = '0-0055', # of records = 0
+Symbol = '0-0093', # of records = 0
+Symbol = '3-0294', # of records = 13
+Symbol = '1-0001', # of records = 0
+Symbol = '4-1535', # of records = 4
+Symbol = '2-0172', # of records = 0
+Symbol = '3-0231', # of records = 8
+Symbol = '0-0095', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0039', # of records = 0
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0082', # of records = 39
+Symbol = '0-0041', # of records = 0
+Symbol = '0-0040', # of records = 2
+Symbol = '0-0021', # of records = 0
+Symbol = '0-0077', # of records = 32
+Checking random symbols
+Symbol = '0-0021', # of records = 0
+Symbol = '0-0066', # of records = 0
+Symbol = '1-0032', # of records = 8
+Symbol = '0-0064', # of records = 0
+Symbol = '1-0097', # of records = 23
+Symbol = '0-0009', # of records = 0
+Symbol = '1-0092', # of records = 0
+Symbol = '3-0021', # of records = 0
+Symbol = '0-0084', # of records = 0
+Symbol = '4-0821', # of records = 12
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Opening file: Symbol swmr_data.h5
+= '0-0047', # of records = 0
+Symbol = '0-0037', # of records = 0
+Symbol = '0-0044', # of records = 0
+Checking common symbols
+Symbol = '0-0054', # of records = 0
+Symbol = '0-0024', # of records = 29
+Checking random symbols
+Symbol = '0-0090', # of records = 0
+Symbol = '0-0049', # of records = 0
+Symbol = '4-0024', # of records = 0
+Symbol = '4-1425', # of records = 0
+Symbol = '0-0023', # of records = 0
+Symbol = '3-0009', # of records = 15
+Symbol = '0-0056', # of records = 0
+Symbol = '1-0082', # of records = 41
+Symbol = '2-0306', # of records = 14
+Symbol = '0-0025', # of records = 0
+Closing file
+Symbol = '0-0039', # of records = 0
+Symbol = '0-0014', # of records = 0
+Symbol = '0-0060', # of records = 22
+Symbol = '0-0021', # of records = 0
+Symbol = '0-0069', # of records = 0
+Checking random symbols
+Symbol = '1-0097', # of records = 23
+Symbol = '0-0081', # of records = 56
+Symbol = '0-0076', # of records = 0
+Symbol = '1-0014', # of records = 50
+Symbol = '1-0022', # of records = 0
+Symbol = '2-0315', # of records = 0
+Symbol = '1-0155', # of records = 17
+Symbol = '3-0041', # of records = 0
+Symbol = '1-0181', # of records = 0
+Symbol = '4-0665', # of records = 0
+CloOpening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0075', # of records = 0
+Symbol = '0-0032', # of records = 22
+Symbol = '0-0081', # of records = 56
+Symbol = '0-0013', # of records = 0
+Symbol = '0-0027', # of records = 0
+Checking random symbols
+Symbol = '1-0065', # of records = 9
+Symbol = '1-0114', # of records = 0
+Symbol = '0-0075', # of records = 0
+Symbol = '1-0177', # of records = 14
+Symbol = '3-0328', # of records = 3
+Symbol = '0-0045', # of records = 0
+Symbol = '0-0051', # of records = 0
+Symbol = '1-0122', # of records = 0
+Symbol = '2-0038', # of records = 0
+Symbol = '0-0029', # of records = 0
+Closing file
+sing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0026', # of records = 53
+Symbol = '0-0082', # of records = 39
+Symbol = '0-0085', # of records = 0
+Symbol = '0-0036', # of records = 0
+Symbol = '0-0026', # of records = 53
+Checking random symbols
+Symbol = '0-0055', # of records = 0
+Symbol = '0-0093', # of records = 0
+Symbol = '3-0294', # of records = 13
+Symbol = '1-0001', # of records = 0
+Symbol = '4-1535', # of records = 4
+Symbol = '2-0172', # of records = 0
+Symbol = '3-0231', # of records = 8
+Symbol = '0-0095', # of records = 0
+Symbol = '0-0000', # of records = 0
+Symbol = '0-0039', # of records = 0
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+CClosing datasets
+Releasing symbols
+losing datasets
+Releasing symbols
+Closing objects
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+
+###############################################################################
+## Add/remove test - randomly grow or shrink the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = 5
+	index type = b2
+Using generator random seed (used in sparse test only): 578195
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_writer
+Using writer random seed: 742537
+launch the swmr_addrem_writer
+Parameters:
+	# of operations between flushes = 1000
+	# of operations = 200000
+Using writer random seed: 991263
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding and removing records
+SWMR_WRITER_MESSAGE is found
+launch 5 swmr_remove_readers
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 132409
+Generating symbol names
+Choosing datasets
+Common symbol #0 = '0-0004'
+Common symbol #1 = '0-0088'
+Common symbol #2 = '0-0045'
+Common symbol #3 = '0-0065'
+Common symbol #4 = '0-0031'
+Random symbol #0 = '0-0053'
+Random symbol #1 = '1-0142'
+Random symbol #2 = '0-0074'
+Random symbol #3 = '1-0087'
+Random symbol #4 = '0-0072'
+Random symbol #5 = '1-0085'
+Random symbol #6 = '0-0027'
+Random symbol #7 = '2-0118'
+Random symbol #8 = '1-0162'
+Random symbol #9 = '1-0129'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 890
+Symbol = '0-0088', # of records = 834
+Symbol = '0-0045', # of records = 891
+Symbol = '0-0065', # of records = 902
+Symbol = '0-0031', # of records = 890
+Checking random symbols
+Symbol = '0-0053', # of Pararemeters:
+	# of seconds between polling = cor1
+	d# of common symbols sto poll = 5
+ 	# of ra=ndom symbols to po 890
+ll = 10
+	# of seconds to test = 8
+Using reader random seed: 144907
+Generating symbol names
+Symbol = '1-0142', # of records = 223
+Symbol = '0-0074', # of records = 894
+Symbol = '1-0087', # of records = 239
+Symbol = '0-0072', # of records = 910
+SChoosying datasets
+Common symmbol #0 = 'b0-0067'
+Common symbool #1 = '0-0055'
+Colmmon symbol #2  = '0-0060'
+Common =symbol  #3 = '0-0036'
+Common 'symbol #4 = '0-00141-0085'
+Random symbo'l #0 = '4-0256'
+Ra,ndom symbol #1  = '0-0006'
+Random #symbol #2 = '3-0430 '
+Random symbolo #3 = '0-0041'
+Randfom symb ol #4 = '0-0062'
+Randorm symbol #5 = '3-0239'
+Random symbole #6 = '0-0010'
+Random symcbol #7 = '0-0082'
+Roandom symbol #r8 = '2-0168'd
+Random symbol #9s = '0-0025'
+ Re=ading records
+ 186
+Opening file: swmr_data.h5
+Symbol = '0-0027', # of records = 826
+Checking common symbols
+Symbol = '2-0118', # Sof records = 63
+Symbol = '1-0162', # of records = 239
+Symbol = '1-0129', # of records = 224
+Closing file
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 150379
+Generating symbol names
+Parameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5C
+	# of random symbohls to poll o= 10
+	# of soeconds to tsest = i8
+Usingn reader rangdom seed:  152733
+Generatindg symbol naames
+tasets
+CommonParameters:
+	# of seconds between polling = 1
+	# of common symbols to poll = 5
+	# of random symbols to poll = 10
+	# of seconds to test = 8
+Using reader random seed: 152733
+Generating symbol names
+ symbol #0 = '0-0081'
+Common symbol #1 = '0-0039'
+Common symbol #2 = '0-0001'
+Common symbol #3 = '0-0002'
+Common symbol #4 = '0-0091'
+Random symbol #0 = Choosing datasets
+Common symbol #0 = '0-0070'
+Common symbol #1 = '0-0088'
+Common symbol #2 = '0-0004'
+Common symbol #3 = '0-0007'
+Common symbol #4 = '0-0010'
+Random symbol #0 = '4-0167'
+RaCndom symbol #1 = '0-0013'
+Ranhdom symbol #2 = '4-0551'
+Ranodom symbol #3 = 'o4-1033'
+Random sysmbol #4 = '0-0090'
+iRandom syng datasetmsb
+oClo m#m5o n=  s'y2-0265m'b
+oRla n#d0o m=  s'y0-0070'm
+bColo m#m6o n=  s'y0-0024m'b
+oRla n#d1o m=  s'y0-0088m'b
+oClo m#m7o n=  s'y3-0200m'b
+oRla n#d2o m=  s'y0-0004m'b
+oClo m#m8o n=  s'y1-0094m'b
+oRla n#d3o m=  s'y0-0007m'b
+oClo m#m9o n=  s'ymbol0-0014 '#
+4 R=e a'd0-0010i'n
+gR arnedcoomr dssy
+mbolO p#e0n i=n g' 4-0167f'i
+lRea:n dswmr_data.h5o
+m symbol #1 = '0-0013'
+Ra'0-0001'
+Random symbol #1 = '3-0286'
+Random symbol #2 = '3-0397'
+Random symbol #3 = '4-1286'
+Random symbol #4 = '0-0097'
+Random symbol #5 = '0-0006'
+Random symbol #6 = '0-0065'
+Random symbol #7 = '4-0399'
+Random symbol #8 = '0-0071'
+Random symbol #9 = '0-0017'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0081', # of records = 851
+Symbol = '0-0039', # of records = 898
+Symbol = '0-0001', # of records = 874
+Symbol = '0-0002', # of records = 903
+Symbol = '0-0091', # of records = 857
+Checking random symbols
+Symbol = '0-0001', # of records = 874
+Symbol = '3-0286', # of records = 22
+Symbol = '3-0397', # of records = 27
+Symbol = '4-1286', # of records = 18
+Symbol = '0-0097', # of records = 899
+Symbol = '0-0006', # of records = 860
+Symbol = '0-0065', # of records = 902
+Symbol = '4-0399', # of records = 9
+Symbol = '0-0071', # of records = 895
+Symbol = '0-0017', # of records = 880
+Closing file
+ndoymm bsoylm b=o l' 0-0067#'2,  =#  'o4-0551f' 
+rReacnCodhroedmcs k si=yn mg879b 
+oclo m#mo3n  =symbols
+Symbol = '0-0055', # Soyfm broelc o=r d's 0-0070=' ,908 
+# of recoSrydmbso l=  =882 
+'0-0060', # of recorSdysm b=o l896 
+= '0-0088', # Soyfm broelc o=r d's0-0036 '=,  829#
+ of records S= ym876b
+ol = '0-0004', S#y mobfo lr e=c o'r0-0014d's,  =#  o898f
+ records = 950S
+ymbol C=h e'c0-0007k'i,n g#  roafn droemc osrydmsb o=l s915
+
+SymbSoymbol = '0-0010l' ,=  #' 4-0256o'f,  r#e coofr drse c=o rd923s
+ = 12
+Checking Sryamn '4-1033'
+Random symbol #4 = '0-0090'
+Random symbol #5 = '2-0265'
+Random symbol #6 = '0-0024'
+Random symbol #7 = '3-0200'
+Random symbol #8 = '1-0094'
+Random symbol #9 = '0-0014'
+Reading records
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 882
+Symbol = '0-0088', # of records = 829
+Symbol = '0-0004', # of records = 898
+Symbol = '0-0007', # of records = 915
+Symbol = '0-0010', # of records = 923
+Checking random symbols
+Symbol = '4-0167', # of records = 14
+Symbol = '0-0013', # of records = 888
+Symbol = '4-0551', # of records = 16
+Symbol = '4-1033', # of records = 11
+Symbol = '0-0090', # of records = 906
+Symbol = '2-0265', # of records = 58
+Symbol = '0-0024', # of records = 896
+Symbol = '3-0200', # of records = 23
+Symbol = '1-0094', # of records = 246
+Symbol = '0-0014', # of records = 950
+Closing file
+bdoom sylmbols
+ = '0-0006', # of records = 860
+Symbol = '4-0167', # of records = 14
+Symbol = '3-0430', # of records S= 25
+ymbol = '0-0013', # of records = 888
+Symbol = '0-0041', # of records = 914
+Symbol = '4-0551', # of records = 16
+Symbol = '0-0062', # of records = 873
+Symbol = '4-1033', # of records = 11
+Symbol = '3-0239', # of records = 35
+Symbol = '0-0090', # of records = 906
+Symbol = '0-0010', # of records = 923
+Symbol = '2-0265', # of records = 58
+Symbol = '0-0082', # of records = 900
+Symbol = '0-0024', # of records = 896
+Symbol = '2-0168', # of records = 55
+Symbol = '3-0200', # of records = 23
+Symbol = '0-0025', # of records = S922
+ymbol = '1-0094', # of records = 246
+Closing file
+Symbol = '0-0014', # of records = 950
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 866
+Symbol = '0-0088', # of records = 840
+Symbol = '0-0045', # of records = 947
+Symbol = '0-0065', # of records = 930
+Symbol = '0-0031', # of records = 1085
+Checking random symbols
+Symbol = '0-0053', # of records = 801
+Symbol = '1-0142', # of records = 138
+Symbol = '0-0074', # of records = 1103
+Symbol = '1-0087', # of records = 231
+Symbol = '0-0072', # of records = 947
+Symbol = '1-0085', # of records = 108
+Symbol = '0-0027', # of records = 896
+Symbol = '2-0118', # of records = 68
+Symbol = '1-0162', # of records = 197
+Symbol = '1-0129', # of records = 200
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0081', # of records = 916
+Symbol = '0-0039', # of records = 1033
+Symbol = '0-0001', # of records = 845
+Symbol = '0-0002', # of records = 821
+Symbol = '0-0091', # of records = 913
+Checking random symbols
+Symbol = '0-0001', # of records = 845
+Symbol = '3-0286', # of records = 12
+Symbol = '3-0397', # of records = 23
+Symbol = '4-1286', # of records = 7
+Symbol = '0-0097', # of records = 950
+Symbol = '0-0006', # of records = 825
+Symbol = '0-0065', # of records = 927
+Symbol = '4-0399', # of records = 24
+Symbol = '0-0071', # of records = 954
+Symbol = '0-0017', # of records = 936
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 726
+Symbol = '0-0088', # of records = 837
+Symbol = '0-0004', # of records = 846
+Symbol = '0-0007', # of records = 763
+Symbol = '0-0010', # of records = 887
+Checking random symbols
+Symbol = '4-0167', # of records = 0
+Symbol = '0-0013', # of records = 1067
+Symbol = '4-0551', # of records = 22
+Symbol = '4-1033', # of records = 21
+Symbol = '0-0090', # of records = 873
+Opening file: swmr_data.h5
+SOypmebnoiln g=  f'i2-0265l'e,:  # swmr_data.h5o
+f records = 80
+CheckSiynmgb oclo m=m o'n0-0024 's,yC m#hb eooclfks i
+rnegc ocrodmsm o=n  Ss998yy
+mmbboolls 
+= 'S0-0067y'm,b o#l S oy=fm  b'ro3-0200el'c ,o= r #d' so0-0070 f'= , r e815#c
+ oorfd sr e=c o56r
+dsS y=m b726o
+lS y=m b'o0-0055l' ,=  #S' y1-0094om'fb, o rl#e  c=ofo  r'rd0-0088es'c ,o= r #d 801so
+ f=  r213e
+cordsS y=m b837So
+ylm b=o l' 0-0060=' ,' S0-0014#y' m,ob fo# lr e=c ' 0-0004o'f,  r#e ocoorfrd dsrs e =c= o r843898d
+
+s = 846
+ClosSiynmgb ofliS ly=em 
+b'o0-0036l' ,=  #' 0-0007o'f,  records = 920
+# of records = 763
+Symbol = '0-0010', # of records = S887
+ymbol C= '0-0014', # of rechords = 898
+ecking random symbols
+Checking random symbols
+Symbol = '4-0167', # of records = 0
+Symbol = '4-0256', # of records = 22
+Symbol = '0-0013', # of records = 1067
+Symbol = '0-0006', # of records = 825
+Symbol = '4-0551', # of records = 22
+Symbol = '3-0430', # of records = 21
+Symbol = '4-1033', # of records = 21
+Symbol = '0-0041', # of records = 704
+Symbol = '0-0090', # of records = 873
+Symbol = '0-0062', # of records = 790
+Symbol = '2-0265', # of records = 80
+Symbol = '3-0239', # of records = 64
+Symbol = '0-0024', # of records = 998
+Symbol = '0-0010', # of records = 887
+Symbol = '3-0200', # of records = 56
+Symbol = '0-0082', # of records = 871
+Symbol = '1-0094', # of records = 213
+Symbol = '2-0168', # of records = 52
+Symbol = '0-0014', # of records = 898
+Symbol = 'C0-0025', # of records =l 1003
+osing file
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 666
+Symbol = '0-0088', # of records = 790
+Symbol = '0-0045', # of records = 981
+Symbol = '0-0065', # of records = 1014
+Symbol = '0-0031', # of records = 1333
+Checking random symbols
+Symbol = '0-0053', # of records = 869
+Symbol = '1-0142', # of records = 75
+Symbol = '0-0074', # of records = 1179
+Symbol = '1-0087', # of records = 203
+Symbol = '0-0072', # of records = 974
+Symbol = '1-0085', # of records = 202
+Symbol = '0-0027', # of records = 924
+Symbol = '2-0118', # of records = 83
+Symbol = '1-0162', # of records = 203
+Symbol = '1-0129', # of records = 225
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0081', # of records = 733
+Symbol = '0-0039', # of records = 1016
+Symbol = '0-0001', # of records = 769
+Symbol = '0-0002', # of records = 704
+Symbol = '0-0091', # of records = 958
+Checking random symbols
+Symbol = '0-0001', # of records = 769
+Symbol = '3-0286', # of records = 20
+Symbol = '3-0397', # of records = 44
+Symbol = '4-1286', # of records = 14
+Symbol = '0-0097', # of records = 900
+Symbol = '0-0006', # of records = 853
+Symbol = '0-0065', # of records = 1016
+Symbol = '4-0399', # of records = 27
+Symbol = '0-0071', # of records = 764
+Symbol = '0-0017', # of records = 896
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 838
+Symbol = '0-0088', # of records = 774
+Symbol = '0-0004', # of records = 679
+Symbol = '0-0007', # of records = 648
+Symbol = '0-0010', # of records = 942
+Checking random symbols
+Symbol = '4-0167', # of records = 13
+Symbol = '0-0013', # of records = 1173
+Symbol = '4-0551', # of records = 10
+Symbol = '4-1033', # of records = 20
+Symbol = '0-0090', # of records = 861
+Symbol = '2-0265', # of records = 83
+Symbol = '0-0024', # of records = 1034
+OpeninSg file: swmr_data.h5
+ymObople n=i n'g3-0200 'f,i l#e :Co fh eswmr_data.h5rc
+ekcionrgd sc o=m mo59n
+ symboClhseS
+cykmibnogl  c=o m'Sm1-0094yo'mn,b o #ls  yo=mf b 'or0-0070le'sc,
+o r#d so f=  re222c
+oSrydmsb o=l  S838=y
+ m'b0-0067o'l,  =#  'o0-0014Sf'y ,mr be#oc loo rf=d  'rs0-0088e' c,=o  r#d 954so
+ f=  r915e
+cords SC=yl mo774bs
+oiln g=  f'i0-0055l'eS,
+y m#b oolf  =r e'c0-0004', #o of records = 679
+rds = 876
+Symbol = '0-0007', # of records = 648
+Symbol = '0-0060', # of records = 754
+Symbol = '0-0010', # of records = 942
+Symbol = '0-0036', # of recorCds = 771
+hecking random symbols
+Symbol = '4-0167', # of records = 13
+Symbol = '0-0014', # of records = 915
+Checking random symbolsS
+ymbol = '0-0013', # of records = 1173
+Symbol = '4-0256', # of records = 6
+Symbol = '4-0551', # of records = 10
+Symbol = '0-0006', # of records = 853
+Symbol = '4-1033', # of records = 20
+Symbol = '3-0430', # of records = 5
+Symbol = '0-0090', # of records = 861
+Symbol = '0-0041', # of records = 643
+Symbol = '2-0265', # of records = 83
+Symbol = '0-0062', # of records = 621
+Symbol = '0-0024', # of records = 1034
+Symbol = '3-0239', # of records = 75
+Symbol = '3-0200', # of records = 59
+Symbol = '0-0010', # of records = 942
+Symbol = '1-0094', # of records = 222
+Symbol = '0-0082', # of records = 975
+Symbol = '0-0014', # of records = 915
+Closing file
+Symbol = '2-0168', # of records = 29
+Symbol = '0-0025', # of records = 993
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 830
+Symbol = '0-0088', # of records = 647
+Symbol = '0-0045', # of records = 968
+Symbol = '0-0065', # of records = 1170
+Symbol = '0-0031', # of records = 1269
+Checking random symbols
+Symbol = '0-0053', # of records = 693
+Symbol = '1-0142', # of records = 51
+Symbol = '0-0074', # of records = 1094
+Symbol = '1-0087', # of records = 156
+Symbol = '0-0072', # of records = 953
+Symbol = '1-0085', # of records = 186
+Symbol = '0-0027', # of records = 887
+Symbol = '2-0118', # of records = 74
+Symbol = '1-0162', # of records = 179
+Symbol = '1-0129', # of records = 169
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0081', # of records = 797
+Symbol = '0-0039', # of records = 932
+Symbol = '0-0001', # of records = 959
+Symbol = '0-0002', # of records = 630
+Symbol = '0-0091', # of records = 899
+Checking random symbols
+Symbol = '0-0001', # of records = 959
+Symbol = '3-0286', # of records = 5
+Symbol = '3-0397', # of records = 36
+Symbol = '4-1286', # of records = 24
+Symbol = '0-0097', # of records = 765
+Symbol = '0-0006', # of records = 920
+Symbol = '0-0065', # of records = 1177
+Symbol = '4-0399', # of records = 43
+Symbol = '0-0071', # of records = 751
+Symbol = '0-0017', # of records = 1031
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 759
+Symbol = '0-0088', # of records = 658
+Symbol = '0-0004', # of records = 821
+Symbol = '0-0007', # of records = 581
+Symbol = '0-0010', # of records = 913
+Checking random symbols
+Symbol = '4-0167', # of records = 9
+Symbol = '0-0013', # of records = 1192
+Symbol = '4-0551', # of records = 0
+Symbol = '4-1033', # of records = 1
+Symbol = '0-0090', # of records = 930
+Symbol = '2-0265', # of records = 102
+Opening file: swmr_data.h5
+Symbol = '0-0024', # of records = 971
+SOypmebnoiln g=C  hf'ei3-0200cl'ke,i: n #g swmr_data.h5 o
+cfo mrmeocno rsdysm b=o ls60
+
+CheckingSS yymcmbobomolml o =n=   's'y1-00940-0070m''b,,o  l##s  
+ooff  rreeccoorrddSssy  m==b  o218759l
+
+ = '0-0067', S#yS myobmfob lor le= c =o' r0-0014'd'0-0088s,'  ,=#   #o883 f
+o fr erceocrodrsd sS= y =m935 b
+658o
+l = C'l0-0055o's,i nS#gy  mofbfio llre e
+=c o'r0-0004d's,  =#  936o
+f records = 821
+Symbol = '0-0060', # of records = 631
+Symbol = '0-0007', # of records = 581
+Symbol = '0-0036', # of records = 889
+Symbol = '0-0010', # of records = 913
+Symbol = '0-0014', # of reCcords = 935
+hecking random symbols
+Checking random symbols
+Symbol = '4-0167', # of recordsS = 9
+ymbol = '4-0256', # of records = 0
+Symbol = '0-0013', # of records = S1192
+ymbol = '0-0006', # of records = 920
+Symbol = '4-0551', # of recordSs = 0
+ymbol = '3-0430', # of records = 14
+Symbol = '4-1033', # of records = 1
+Symbol = '0-0041', # of records = 564
+Symbol = '0-0090', # of records = 930
+Symbol = '0-0062', # of records = 602
+SymbolS y=m b'2-0265ol =' '3-0239', # of records = ,91
+ # of records = 102
+Symbol = '0-0010', # of records = 913
+Symbol = '0-0024', # of records = 971
+Symbol = '0-0082', # of records = 1093
+Symbol = '3-0200', # of records = 60
+Symbol = '2-0168', # of records = 21
+Symbol = '1-0094', # of records = 218
+Symbol = '0-0025', # of records = 1064
+Symbol = '0-0014', # Cof records = 935
+losing file
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0045', # of records = 992
+Symbol = '0-0065', # of records = 1164
+Symbol = '0-0031', # of records = 1263
+Checking random symbols
+Symbol = '0-0053', # of records = 741
+Symbol = '1-0142', # of records = 76
+Symbol = '0-0074', # of records = 1103
+Symbol = '1-0087', # of records = 146
+Symbol = '0-0072', # of records = 972
+Symbol = '1-0085', # of records = 186
+Symbol = '0-0027', # of records = 931
+Symbol = '2-0118', # of records = 74
+Symbol = '1-0162', # of records = 199
+Symbol = '1-0129', # of records = 163
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0081', # of records = 778
+Symbol = '0-0039', # of records = 913
+Symbol = '0-0001', # of records = 920
+Symbol = '0-0002', # of records = 605
+Symbol = '0-0091', # of records = 909
+Checking random symbols
+Symbol = '0-0001', # of records = 920
+Symbol = '3-0286', # of records = 5
+Symbol = '3-0397', # of records = 46
+Symbol = '4-1286', # of records = 24
+Symbol = '0-0097', # of records = 767
+Symbol = '0-0006', # of records = 913
+Symbol = '0-0065', # of records = 1164
+Symbol = '4-0399', # of records = 33
+Symbol = '0-0071', # of records = 732
+Symbol = '0-0017', # of records = 1027
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 797
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0007', # of records = 546
+Symbol = '0-0010', # of records = 887
+Checking random symbols
+Symbol = '4-0167', # of records = 10
+Symbol = '0-0013', # of records = 1201
+Symbol = '4-0551', # of records = 0
+Symbol = '4-1033', # of records = 1
+Symbol = '0-0090', # of records = 919
+Symbol = '2-0265', # of records = 105
+OOpenping file: swmr_data.h5
+ening file: swmr_data.h5
+Symbol = '0-0024', # of records = 1003
+Checking common symbols
+Symbol = 'C3-0200', # of records = 51
+hecking common symbolSs
+ymbol = '0-0070', # of recorSds = 797
+ymbol = '1-0094', # of recordsS = 221
+ymbol = '0-0067', # of records = 862
+Symbol = '0-0088', # of recorSds = 687
+ymbol = '0-0014', # of records = 933
+SSymbol = '0-0004', # of reCcords = 851
+lymbol = '0-0055', # of records = 938
+osing file
+Symbol = '0-0007', # of Srecords = 546
+ymbol = '0-0060', # of records = 678
+Symbol = '0-0010', # of records = 887
+Symbol = '0-0036', # of recordsChec = 888
+king random symbols
+Symbol = '4-0167'Symbo, # of l = '0-0014', # records = of recor10
+ds = 933
+Checking randomSymb symbolol = '0-0013',s
+ # of records = 1201
+Symbol = '4-0256', # of records = 0
+Symbol = '4-0551', # of records Symbo= 0
+l = '0-0006', # of records = 913
+Symbol = '4-1033', # of records = 1
+Symbol = '3-0430', # of records = 14
+Symbol = '0-0090', # of records = 919
+Symbol = '0-0041', # of records = 563
+Symbol = '2-0265', # of recordsSymbo = 105
+l = '0-0062', # of records = 610
+Symbol = '0-0024', # of recordsSymb = 1003
+ol = '3-0239', # of records = 91
+Symbol = '3-0200',Symb # of rol = '0-0010',ecords =  # of re51
+cords = 887
+Symbol = '1-0094'Symb, # of ol = '0-0082',records = # of re 221
+cords = 1076
+Symbol = '0-0014', # of Symbrecordsol = '2-0168',  = 933
+# of records = 29
+Closing file
+Symbol = '0-0025', # of records = 1047
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0045', # of records = 992
+Symbol = '0-0065', # of records = 1164
+Symbol = '0-0031', # of records = 1263
+Checking random symbols
+Symbol = '0-0053', # of records = 741
+Symbol = '1-0142', # of records = 76
+Symbol = '0-0074', # of records = 1103
+Symbol = '1-0087', # of records = 146
+Symbol = '0-0072', # of records = 972
+Symbol = '1-0085', # of records = 186
+Symbol = '0-0027', # of records = 931
+Symbol = '2-0118', # of records = 74
+Symbol = '1-0162', # of records = 199
+Symbol = '1-0129', # of records = 163
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0081', # of records = 778
+Symbol = '0-0039', # of records = 913
+Symbol = '0-0001', # of records = 920
+Symbol = '0-0002', # of records = 605
+Symbol = '0-0091', # of records = 909
+Checking random symbols
+Symbol = '0-0001', # of records = 920
+Symbol = '3-0286', # of records = 5
+Symbol = '3-0397', # of records = 46
+Symbol = '4-1286', # of records = 24
+Symbol = '0-0097', # of records = 767
+Symbol = '0-0006', # of records = 913
+Symbol = '0-0065', # of records = 1164
+Symbol = '4-0399', # of records = 33
+Symbol = '0-0071', # of records = 732
+Symbol = '0-0017', # of records = 1027
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 797
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0007', # of records = 546
+Symbol = '0-0010', # of records = 887
+Checking random symbols
+Symbol = '4-0167', # of records = 10
+Symbol = '0-0013', # of records = 1201
+Symbol = '4-0551', # of records = 0
+Symbol = '4-1033', # of records = 1
+Symbol = '0-0090', # of records = 919
+Symbol = '2-0265', # of records = 105
+Symbol = '0-0024', # of records = 1003
+Symbol = '3-0200', # of records = 51
+Symbol = '1-0094', # of records = 221
+Symbol = '0-0014', # of records = 933
+Closing file
+Opening file: swmr_data.h5
+Checking common symbolOpenis
+ng file: swmr_data.h5
+Symbol = '0-0070', # of records = 797
+Checking common symbols
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0067', # of records = 862
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0055', #Symb of recol = '0-0007', ords = 938
+# of records = 546
+Symbol = '0-0060', #Symbo of recl = '0-0010', # ords = of recor678
+ds = 887
+Checking random symbolSymbos
+l = '0-0036', # of records = 888
+Symbol = '4-0167', # of records = 10
+Symbol = '0-0014', # of records = 933
+Symbol = '0-0013', # of recCheckords = ing random s1201
+ymbols
+Symbol = '4-0256Symb', # ofol = '4-0551', records =  # of re0
+cords = 0
+Symbol = '0-0006', # of recordSymbs = 913ol = '4-1033',
+ # of records = 1
+Symbol = '3-0430'Symb, # of ol = '0-0090',records =  # of re14
+cords = 919
+Symbol = '0-0041', # of records = 563
+SymboSymbl = '2-0265', # ol = '0-0062',of recor # of reds = 105
+cords = 610
+SymbSymbol = '0-0024',ol = '3-0239', # of recor # of reds = 1003cords = 
+91
+SymboSymbol = '0-0010', #l = '3-0200', #  of recoof recorrds = 887ds = 51
+
+SymboSymbl = '0-0082', #ol = '1-0094', of record # of res = 1076
+cords = 221
+SymbSymbol = '2-0168'ol = '0-0014', , # of reco# of recrds = ords = 29
+933
+Closing file
+Symbol = '0-0025', # of records = 1047
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0045', # of records = 992
+Symbol = '0-0065', # of records = 1164
+Symbol = '0-0031', # of records = 1263
+Checking random symbols
+Symbol = '0-0053', # of records = 741
+Symbol = '1-0142', # of records = 76
+Symbol = '0-0074', # of records = 1103
+Symbol = '1-0087', # of records = 146
+Symbol = '0-0072', # of records = 972
+Symbol = '1-0085', # of records = 186
+Symbol = '0-0027', # of records = 931
+Symbol = '2-0118', # of records = 74
+Symbol = '1-0162', # of records = 199
+Opening file: swmr_data.h5
+Symbol = '1-0129', # of records = 163
+Closing file
+Checking common symbols
+Symbol = '0-0081', # of records = 778
+Symbol = '0-0039', # of records = 913
+Symbol = '0-0001', # of records = 920
+Symbol = '0-0002', # of records = 605
+Symbol = '0-0091', # of records = 909
+Checking random symbols
+Symbol = '0-0001', # of records = 920
+Symbol = '3-0286', # of records = 5
+Symbol = '3-0397', # of records = 46
+Symbol = '4-1286', # of records = 24
+Symbol = '0-0097', # of records = 767
+Symbol = '0-0006', # of records = 913
+Symbol = '0-0065', # of records = 1164
+Symbol = '4-0399', # of records = 33
+Symbol = '0-0071', # of records = 732
+Symbol = '0-0017', # of records = 1027
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 797
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0007', # of records = 546
+Symbol = '0-0010', # of records = 887
+Checking random symbols
+Symbol = '4-0167', # of records = 10
+Symbol = '0-0013', # of records = 1201
+Symbol = '4-0551', # of records = 0
+Symbol = '4-1033', # of records = 1
+Symbol = '0-0090', # of records = 919
+Symbol = '2-0265', # of records = 105
+Symbol = '0-0024', # of records = 1003
+Symbol = '3-0200', # of records = 51
+Symbol = '1-0094', # of records = 221
+Symbol = '0-0014', # of records = 933
+Closing file
+Opening file: swmr_data.h5
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', Check# of reing common symbcords = ols
+797
+SymboSymbol = '0-0067', l = '0-0088', # # of recoof recorrds = 862ds = 687
+
+SymboSymbol = '0-0004', #l = '0-0055', #  of recordsof recor = 851
+ds = 938
+SymboSymbol = '0-0007', #l = '0-0060', #  of recordsof recor = 546
+ds = 678
+SymboSymbol = '0-0010', #l = '0-0036', # of records  of reco= 887
+rds = 888
+Checking random symbols
+Symbol = '0-0014', # of recSymbords = ol = '4-0167'933
+, # of records = 10
+Checking random symbols
+Symbol = '0-0013'Symb, # of ol = '4-0256'records = , # of r1201
+ecords = 0
+Symbol = '0-0006'Symb, # of ol = '4-0551',records  # of re= 913
+cords = 0
+SymbSymbol = '3-0430',ol = '4-1033', # of re # of records = cords = 14
+1
+SymbSymbol = '0-0041'ol = '0-0090',, # of re # of records = cords = 563
+919
+Symbol = '0-0062', Sym# of rebol = '2-0265', #cords = 610 of reco
+rds = 105
+Symbol = '3-0239'Symbo, # of l = '0-0024', # records = 91of recor
+ds = 1003
+Symbol = '0-0010', # of recordsSymb = 887
+ol = '3-0200', # of records = 51
+Symbol = '0-0082', # of recordsSymb = 1076
+ol = '1-0094', # of records = 221
+Symbol = '2-0168', # of Symbrecordsol = '0-0014 = 29
+', #Symb of records = ol = '0-0025', #933
+ of records = 1047
+Closing file
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0045', # of records = 992
+Symbol = '0-0065', # of records = 1164
+Opening file: swmr_data.h5
+Symbol = '0-0031', # of records = 1263
+Checking random symbols
+SymbChecking commool = '0-0053',n symbols
+ # of records = 741
+Symbol = '0-0081'Symb, # ool = '1-0142f reco', # rds = of rec778
+ords = 76
+Symbol = '0-0074', # of recordSymbos = l = '0-0039', 1103
+# of records = 913
+Symbol = '1-0087', # of recordsSymb = ol = '0-0001',146
+ # of records = 920
+Symbol = '0-0072', # of records = 972
+Symbol = '0-0002', # of records = 605
+Symbol = '1-0085', # of records = 186
+Symbol = '0-0091', # of records = 909
+SymbolChec = '0-0027'king random, # of symbo recorls
+ds = 931
+Symbol = '0-0001', # of records = 920
+Symbol = '2-0118', # of records = 74
+Symbol = '3-0286', # of records = 5
+Symbol = '1-0162', # of records = 199
+Symbol = '3-0397', # of records = 46
+Symbol = '1-0129', # of records = 163
+Closing file
+Symbol = '4-1286', # of records = 24
+Symbol = '0-0097', # of records = 767
+Symbol = '0-0006', # of records = 913
+Symbol = '0-0065', # of records = 1164
+Symbol = '4-0399', # of records = 33
+Symbol = '0-0071', # of records = 732
+Symbol = '0-0017', # of records = 1027
+Closing file
+Opening file: swmr_data.h5
+Checking common symbols
+Symbol = '0-0070', # of records = 797
+Symbol = '0-0088', # of records = 687
+Symbol = '0-0004', # of records = 851
+Symbol = '0-0007', # of records = 546
+Symbol = '0-0010', # of records = 887
+Checking random symbols
+Symbol = '4-0167', # of records = 10
+Symbol = '0-0013', # of records = 1201
+Symbol = '4-0551', # of records = 0
+Symbol = '4-1033', # of records = 1
+Symbol = '0-0090', # of records = 919
+Symbol = '2-0265', # of records = 105
+Symbol = '0-0024', # of records = 1003
+Symbol = '3-0200', # of records = 51
+Symbol = '1-0094', # of records = 221
+Symbol = '0-0014', # of records = 933
+Closing file
+OpeninOpenig file: swmr_data.h5
+ng file: swmr_data.h5
+CheckChecking common sying common symmbols
+bols
+Symbol = '0-0067', Symbo# of rel = '0-0070', #cords =  of recor862
+ds = 797
+SymboSymbol = '0-0055', #l = '0-0088', #  of recordof recors = 938
+ds = 687
+Symbol = '0-0060', #Symbo of recl = '0-0004', # ords = 678
+of records = 851
+Symbol = '0-0036', #Symbo of recl = '0-0007', #ords = 888 of reco
+rds = 546
+Symbol = '0-0014', Symbo# of rel = '0-0010', # cords = of recor933
+ds = 887
+Checking randomChec symbolking random ss
+ymbols
+SymbSymbol = '4-0256ol = '4-0167'', # of recor, # of rds = 0ecords =
+ 10
+Symbol = '0-0006', # of Symbrecordsol = '0-0013' = 913
+, # of records = 1201
+Symbol = '3-0430', # of recordsSymb = 14
+ol = '4-0551', # of records = 0
+Symbol = '0-0041', # of Symbrecords ol = '4-1033', #= 563
+ of records = 1
+Symbol = '0-0062', # of Symbrecordsol = '0-0090',  = 610
+# of records = 919
+Symbol = '3-0239', # of Symbrecordsol = '2-0265', = 91
+ # of records = 105
+Symbol = '0-0010', # of rSymbecords ol = '0-0024',= 887
+ # of records = 1003
+Symbol = '0-0082', # of Symbrecordsol = '3-0200' = 1076
+, # of records = 51
+Symbol = '2-0168'Symb, # of ol = '1-0094', records = # of rec29
+ords = 221
+SymbSymbol = '0-0025'ol = '0-0014',, # of record # of res = 1047
+cords = 933
+Closing file
+Closing file
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+Closing datasets
+Releasing symbols
+Closing objects
+ClosiClosingng datasets
+Releasing symbols
+ datasets
+Releasing symbols
+Closing objects
+Closing objects
+
+###############################################################################
+## Sparse writer test - test writing to random locations in the dataset
+###############################################################################
+launch the swmr_generator
+Parameters:
+	swmr writes off
+	compression level = 5
+	index type = b2
+Using generator random seed (used in sparse test only): 207648
+Generating skeleton file: swmr_data.h5
+Creating file
+Creating datasets
+Closing objects
+launch the swmr_sparse_writer
+Parameters:
+	# of records between flushes = 1000
+	# of records to write = 20000
+Generating symbol names
+Opening skeleton file: swmr_data.h5
+Opening datasets
+Adding records
+SWMR_WRITER_MESSAGE is found
+launch 3 swmr_sparse_readers
+Closing datasets
+Releasing symbols
+Closing objects
+SWMR tests passed.
+108.16user 18.26system 2:10.86elapsed 96%CPU (0avgtext+0avgdata 235364maxresident)k
+48inputs+3241728outputs (3major+1900542minor)pagefaults 0swaps
+
+Finished testing testswmr.sh 
+============================

@@ -1,0 +1,9 @@
+============================
+testh5dumpvds.sh  Test Log
+============================
+All h5dump tests passed.
+0.52user 0.19system 0:00.49elapsed 145%CPU (0avgtext+0avgdata 3852maxresident)k
+0inputs+776outputs (0major+78850minor)pagefaults 0swaps
+
+Finished testing testh5dumpvds.sh 
+============================
